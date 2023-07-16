@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>直播控制台</title>
+        <link rel="stylesheet" href="./static/css/setting.css">
+        <link rel="shortcut icon" href="./static/img/omlet.ico" type="image/x-icon" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      </head>
+      <body>
+        <div class="navbar">
+            <ul>
+                <li class="logo">
+                <a href="./index.html"><img src="./static/img/omlet_logo.png" alt="Text"></a>
+                </li>
+                <li class="text">
+                <a href="./index.html"><img src="./static/img/abc.png" alt="Text"></a>
+                </li>
+                <li><a href="#">直播</a></li>
+                <li><a href="#">遊戲</a></li>
+                <li><a href="#">論壇</a></li>
+                <li><a href="#">活動</a></li>
+                <li><a href="#">進階方案</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown(event)">更多<i class="ri-arrow-down-s-fill"></i></a>
+                    <div class="dropdown-content">
+                    <a href="./setting.html">Omlet Connect</a>
+                    <a href="./setting.html">直播你的電腦遊戲</a>
+                    <a href="#">陪玩</a>
+                    <a href="#">啟用全球模式</a>
+                    <a href="#">常見問題&尋求幫助</a>
+                    <a href="#">使用者規範</a>
+                    <a href="#">保密協定</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="right-items-container">
+            <ul class="right-items">
+                <li>
+                    <div class="search-container">
+                    <i class="ri-search-line"></i>
+                    <input type="search" placeholder="搜尋" class="search-box">
+                    </div>
+                </li>
+            <div class="chat-dropdown">
+                <li id="icon">
+                <i class="ri-message-2-fill" onclick="myFunction()"></i>
+                </li>
+                <div id="chatDropdown" class="chat-dropdown-content">
+                <div class="chat-column">
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼3.jpg" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>89tank64</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                    </div>  
+                </div>
+    
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼2.jpg" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>wglow1031u</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                    </div>  
+                </div>
+    
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼4.jpg" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>hello_jimmy.0825</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                    </div>  
+                </div>
+                                
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/feng_nai.png" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>feng_nai</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                    </div>  
+                </div>
+                
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼5.jpg" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>miki_dont_back</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                    </div>  
+                </div>
+                
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼6.jpg" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>miki_cant_back</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                    </div>  
+                </div>
+                    
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/omletarcade.jpg" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>omletarcade</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                    </div>  
+                </div>
+                                
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/omlet tw.jpg" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>omlet.tw</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                    </div>  
+                </div>
+                
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/Minecraft.png" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>Minecraft Bedrock</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>Player 已加入。</span>
+                    </div>
+                    </div>  
+                </div>
+                
+                <div class="chat-box-info">
+                    <div class="chat-user-pic">
+                    <img src="./static/img/roblox.png" alt="chat-user-pic">
+                    </div>
+                    <div class="chat-item-info">
+                    <div class="chat-user-name">
+                        <span>Roblox Group</span>
+                    </div>
+                    <div class="chat-msg">
+                        <span>Player 已加入。</span>
+                    </div>
+                    </div>  
+                </div>
+                </div>
+                </div>
+                </div>
+                <li id="icon"><i class="ri-user-fill"></i></li>
+                <li id="icon"><i class="ri-notification-2-fill"></i></li>
+                <li id="icon"><i class="ri-store-3-fill"></i></li>
+                <li class="token"><a href="#"><img src="./static/img/token.png" >購買OM幣</a></li>
+                <li class="profile">
+                  <img src="./static/img/McluuQal.jpg">
+                </li>
+                <li class="dropdown dropdown-profile">
+                  <a href="#" onclick="toggleDropdown(event)">miki_come_back</a>
+                  <div class="dropdown-content">
+                    <a href="./setting.html">直播你的電腦遊戲</a>
+                    <a href="./dashboard.html">直播控制台</a>
+                    <a href="#">直播紀錄</a>
+                    <a href="#">帳號設定</a>
+                    <a href="#">獲取認證</a>
+                    <a href="#">登出</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="overlay">
+            <div class="overlay-title">Buy Tokens</div>
+            <div class="wallet">
+              <span class="wallet-text">My Wallet</span>
+              <a class="wallet-amount"><img src="./static/img/token.png">1320</a>
+            </div>
+            <div class="square-row">
+              <div class="square-object">
+                <div class="token-wrapper">
+                  <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">70</div>
+                  <img src="./static/img/token.png" class="token-ex">
+                </div>
+                <div class="overlay-text">USD$1</div>
+              </div>
+              <div class="square-object">
+                <div class="token-wrapper">
+                  <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">350</div>
+                  <img src="./static/img/token.png" class="token-ex">
+                </div>
+                <div class="overlay-text">USD$5</div>
+              </div>
+              <div class="square-object">
+                <div class="token-wrapper">
+                  <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">720</div>
+                  <img src="./static/img/token.png" class="token-ex">
+                </div>
+                <div class="overlay-text">USD$10</div>
+              </div>
+              <div class="square-object">
+                <div class="token-wrapper">
+                  <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">1440</div>
+                  <img src="./static/img/token.png" class="token-ex">
+                </div>
+                <div class="overlay-text">USD$20</div>
+              </div>
+              <div class="square-object">
+                <div class="token-wrapper">
+                  <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">3600</div>
+                  <img src="./static/img/token.png" class="token-ex">
+                </div>
+                <div class="overlay-text">USD$50</div>
+              </div>
+              <div class="square-object">
+                <div class="token-wrapper">
+                  <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">7500</div>
+                  <img src="./static/img/token.png" class="token-ex">
+                </div>
+                <div class="overlay-text">USD$100</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="left-navbar">
+            <ul>
+              <li  style="background-color: #53545f;">
+                <a href="./setting.html">直播設定</a>
+              </li>
+              <li><a href="#">直播小工具</a></li>
+              <li><a href="./dashboard.html">直播控制台</a></li>
+              <li><a href="#">直播數據摘要</a></li>
+              <li><a href="#">分析</a></li>
+              <li><a href="#">設定帳號</a></li>
+              <li><a href="#">獲得認證</a></li>
+              <li><a href="#">常見問題</a></li>
+              <li><a href="#">相關問題</a></li>
+            </ul>
+          </div>
+
+        <div class="connect">
+            <div class="all-info">
+                <div class="one">
+                    <div class="one-title">
+                        <span>Omlet Connect</span>
+                    </div>
+                    <div class="one-subtitle">
+                        <span>手機連接電腦-什麼什麼什麼</span>
+                        <span style="color: orangered;">了解更多</span>
+                    </div>
+                    <div class="one-box">
+                        <div class="connect-img">
+                            <img src="./static/img/omlet connect.jpg" alt="omlet connect">
+                        </div>
+                        <div class="one-right-box">
+                            <div class="right-box-title">
+                                <span>立即連接手機及電腦</span>
+                            </div>
+                            <div class="right-box-subtitle">
+                                <span>
+                                    你可以透過Omlet Connect進行直播然後就是說羅沃的截圖真的是靠北模糊真的是很雷
+                                </span>
+                            </div>
+                            <div class="right-box-btn">
+                                <span>下載Omlet Connect</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="two">
+                    <div class="one-title">
+                        <span>設定串聯金鑰</span>
+                    </div>
+                    <div class="two-box">
+                        <div class="left-box">
+                            <div class="left-box-title">
+                                <span>步驟1 - 安裝</span>
+                            </div>
+                            <div class="left-box-subtitle">
+                                <span>這串是啥我也不看不到</span>
+                            </div>
+                            <div class="left-pic-box">
+                                <div class="left-box-img">
+                                    <img src="./static/img/obs.png">
+                                    <span>OBS</span>
+                                    <div class="download-btn">
+                                        <span>下載</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="two-right-box">
+                            <div class="right-box-title">
+                                <span>步驟2 - 設定Custom RTMP URL和串流金鑰</span>
+                            </div>
+                            <div class="right-box-subtitle">
+                                <span>
+                                    然後就是說羅沃的截圖真的是靠北模糊真的是很雷
+                                </span>
+                            </div>
+                            <div class="right-box-box2">
+                                <span>Custom RTMP URL</span>
+                                <div class="links">
+                                    <input type="text" placeholder="rtmp://pus.1.omlet.gg" class="white-placeholder">
+                                    <div class="right-box-box2-btn">複製</div>
+                                </div>
+                                <span>串流金鑰</span>
+                                <div class="links">
+                                    <input type="text" placeholder="gxAXbmkL91yA6NPZdeMErdeTakmdW1bqNhEzJiFh6ojD5xslF9xcKK9F8ps6fTNr" class="white-placeholder" id="keywords">
+                                    <div class="right-box-box2-btn">複製</div>
+                                </div>       
+                                <span style="color: orangered; cursor: pointer; font-size: 13px;">重製金鑰</span>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="three">
+                    <div class="one-title">
+                        <span>直播設定</span>
+                    </div>
+                    <div class="one-box">
+                      <div class="left-box">
+                        <div class="left-box-title" style="padding: 0px 5px 5px 0px;">
+                            <span>多平台直播</span>
+                            <div class="vip-icon">
+                              <i class="ri-vip-crown-fill"></i>
+                              <span>Omlet Plus</span>
+                            </div>
+                        </div>
+                        <div class="left-box-subtitle">
+                            <span>這串是啥我也不看不到</span>
+                        </div>
+                    </div>
+                        <div class="one-right-box">
+                            <div class="right-box-title">
+                                <span>直播內容</span>
+                            </div>
+                            <div class="right-box-subtitle">
+                                <span>標題</span>
+                                <input type="text" placeholder="請輸入直播標題...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="air">
+            
+        </div>
+          <script>
+            // JavaScript程式碼
+            function toggleDropdown(event) {
+              event.preventDefault();
+              var dropdown = event.target.parentNode;
+              dropdown.classList.toggle("show");
+          
+              // 檢查右側邊界碰撞
+              var dropdownContent = dropdown.querySelector(".dropdown-content");
+              var rect = dropdownContent.getBoundingClientRect();
+              var windowWidth = window.innerWidth;
+              if (rect.right > windowWidth) {
+                var shiftAmount = rect.right - windowWidth + 10; // 1為右側留白距離
+                var leftPosition = parseInt(getComputedStyle(dropdownContent).left, 10);
+                var adjustedLeftPosition = leftPosition - shiftAmount;
+                dropdownContent.style.left = Math.max(adjustedLeftPosition, 0) + "px";
+              } else {
+                dropdownContent.style.left = "auto";
+              }
+            }
+          
+            window.addEventListener("click", function(event) {
+              var dropdowns = document.getElementsByClassName("dropdown");
+              for (var i = 0; i < dropdowns.length; i++) {
+                var dropdown = dropdowns[i];
+                if (!dropdown.contains(event.target)) {
+                  dropdown.classList.remove("show");
+                  var dropdownContent = dropdown.querySelector(".dropdown-content");
+                  dropdownContent.style.left = "auto"; // 重置left樣式
+                }
+              }
+            });
+          </script>
+    
+          <script>
+            const tokenButton = document.querySelector('.token');
+            const overlay = document.querySelector('.overlay');
+    
+            tokenButton.addEventListener('click', (event) => {
+              event.stopPropagation();
+              overlay.style.display = 'block';
+            });
+    
+            document.addEventListener('click', (event) => {
+              if (!tokenButton.contains(event.target) && !overlay.contains(event.target)) {
+                overlay.style.display = 'none';
+              }
+            });
+          </script>
+          <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("chatDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.ri-message-2-fill')) {
+                var dropdowns = document.getElementsByClassName("chat-dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+      </body>
+</html>

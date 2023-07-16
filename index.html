@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Omlet Arcade</title>
+        <link rel="stylesheet" href="./static/css/index.css">
+        <link rel="shortcut icon" href="./static/img/omlet.ico" type="image/x-icon" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+      <div class="navbar">
+        <ul>
+          <li class="logo">
+            <a href="./index.html"><img src="./static/img/omlet_logo.png" alt="Text"></a>
+          </li>
+          <li class="text">
+            <a href="./index.html"><img src="./static/img/abc.png" alt="Text"></a>
+          </li>
+          <li><a href="#">直播</a></li>
+          <li><a href="#">遊戲</a></li>
+          <li><a href="#">論壇</a></li>
+          <li><a href="#">活動</a></li>
+          <li><a href="#">進階方案</a></li>
+          <li class="dropdown">
+            <a href="#" onclick="toggleDropdown(event)">更多<i class="ri-arrow-down-s-fill"></i></a>
+            <div class="dropdown-content">
+              <a href="./setting.html">Omlet Connect</a>
+              <a href="./setting.html">直播你的電腦遊戲</a>
+              <a href="#">陪玩</a>
+              <a href="#">啟用全球模式</a>
+              <a href="#">常見問題&尋求幫助</a>
+              <a href="#">使用者規範</a>
+              <a href="#">保密協定</a>
+            </div>
+          </li>
+        </ul>
+        <div class="right-items-container">
+          <ul class="right-items">
+            <li>
+              <div class="search-container">
+                <i class="ri-search-line"></i>
+                <input type="search" placeholder="搜尋" class="search-box">
+              </div>
+            </li>
+            <div class="chat-dropdown">
+              <li id="icon">
+                <i class="ri-message-2-fill" onclick="myFunction()"></i>
+              </li>
+              <div id="chatDropdown" class="chat-dropdown-content">
+              <div class="chat-column">
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼3.jpg" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>89tank64</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                  </div>  
+                </div>
+
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼2.jpg" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>wglow1031u</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                  </div>  
+                </div>
+
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼4.jpg" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>hello_jimmy.0825</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                  </div>  
+                </div>
+                                
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/feng_nai.png" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>feng_nai</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                  </div>  
+                </div>
+                
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼5.jpg" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>miki_dont_back</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                  </div>  
+                </div>
+                
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/omlet頭貼6.jpg" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>miki_cant_back</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                  </div>  
+                </div>
+                
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/omletarcade.jpg" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>omletarcade</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                  </div>  
+                </div>
+                                
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/omlet tw.jpg" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>omlet.tw</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>osmfoqnpofiqehfboiehfbiobfewfbfwfo</span>
+                    </div>
+                  </div>  
+                </div>
+                
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/Minecraft.png" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>Minecraft Bedrock</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>Player 已加入。</span>
+                    </div>
+                  </div>  
+                </div>
+                
+                <div class="chat-box-info">
+                  <div class="chat-user-pic">
+                    <img src="./static/img/roblox.png" alt="chat-user-pic">
+                  </div>
+                  <div class="chat-item-info">
+                    <div class="chat-user-name">
+                      <span>Roblox Group</span>
+                    </div>
+                    <div class="chat-msg">
+                      <span>Player 已加入。</span>
+                    </div>
+                  </div>  
+                </div>
+                
+              </div>
+              </div>
+            </div>
+            <li id="icon"><i class="ri-user-fill"></i></li>
+            <li id="icon"><i class="ri-notification-2-fill"></i></li>
+            <li id="icon"><i class="ri-store-3-fill"></i></li>
+            <li class="token"><a href="#"><img src="./static/img/token.png" >購買OM幣</a></li>
+            <li class="profile">
+              <img src="./static/img/McluuQal.jpg">
+            </li>
+            <li class="dropdown dropdown-profile">
+              <a href="#" onclick="toggleDropdown(event)">miki_come_back</a>
+              <div class="dropdown-content">
+                <a href="./setting.html">直播你的電腦遊戲</a>
+                <a href="./dashboard.html">直播控制台</a>
+                <a href="#">直播紀錄</a>
+                <a href="#">帳號設定</a>
+                <a href="#">獲取認證</a>
+                <a href="#">登出</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="slideshow-container">
+
+        <input type="radio" name="slider" class="d-none" id="s1" checked>
+        <input type="radio" name="slider" class="d-none" id="s2">
+        <input type="radio" name="slider" class="d-none" id="s3">
+        <input type="radio" name="slider" class="d-none" id="s4">
+        <input type="radio" name="slider" class="d-none" id="s5">
+    
+        <div class="cards">
+          <label for="s1" id="slide1">
+            <div class="card">
+              <img src="https://wallpapercave.com/wp/wp2652290.jpg" class="stream">
+              <div class="title">快來觀看我的直播!</div>
+              <div class="card-live-title">LIVE</div>
+              <div class="fire"><i class="ri-fire-fill"></i> 135.8K</div>
+              <img src="./static/img/Minecraft.png" class="game">
+              <div class="right-info">
+                <div class="image">
+                  <img src="./static/img/omlet頭貼1.jpg" alt="">
+                </div>
+                <div class="infos">
+                  <span class="name">miki_come_back</span>
+                  <div class="fans-info">
+                    <span class="fans">13500</span>
+                    <span class="fans-text">粉絲</span>
+                  </div>
+                  <span class="lorem">
+                    月數香正設便度他會背買區皮此想地面你子害弟，張死演友令，入果到好眼理藝下庭生分人改創處死；術沒不斯種面界物想率即取上到。沒成解比食在種這銷好排外關：多白究西女即畫天微神，中引麼龍，影手你不年比大旅所。部始基令來斷地國總們陽樂對得仍。
+                  </span>
+                </div>
+              </div>
+              <div class="tool">
+                <i class="ri-pause-fill"></i>
+                <i class="ri-volume-down-fill"></i>
+                <i class="ri-fullscreen-fill"></i>
+              </div>
+            </div>
+          </label>
+    
+          <label for="s2" id="slide2">
+            <div class="card">
+              <img src="https://twinfinite.net/wp-content/uploads/2023/01/Minecraft-Legends-1.jpg?fit=1200%2C675" class="stream">
+              <div class="title">快來觀看我的直播!</div>
+              <div class="card-live-title">LIVE</div>
+              <div class="fire"><i class="ri-fire-fill"></i> 15K</div>
+              <img src="./static/img/Minecraft.png" class="game">
+              <div class="right-info">
+                <div class="image">
+                  <img src="./static/img/omlet頭貼2.jpg" alt="">
+                </div>
+                <div class="infos">
+                  <span class="name">wglow1031u</span>
+                  <div class="fans-info">
+                    <span class="fans">13500</span>
+                    <span class="fans-text">粉絲</span>
+                  </div>
+                  <span class="lorem">
+                    著天可也法油行於調軍了心了國著！待一復來就日示始一晚馬育自……小廠都來羅！傳分的我，覺理長都賣可示各小問太當和有活年電戰，人內品直於到石班電大……全是到的去我球式業學、四滿在空需時廣知類我行總學天有人經放辦風，大建部可銷山好盡好由統？
+                  </span>
+                </div>
+              </div>
+              <div class="tool">
+                <i class="ri-pause-fill"></i>
+                <i class="ri-volume-down-fill"></i>
+                <i class="ri-fullscreen-fill"></i>
+              </div>
+            </div>
+          </label>
+    
+          <label for="s3" id="slide3">
+            <div class="card">
+              <img src="https://archive.org/download/minecraft-pvp-legacy-challenge-duels-ft.-tasis/minecraft-pvp-legacy-challenge-duels-ft.-tasis.thumbs/Minecraft%20Pvp%20legacy%20Challenge%20-%20Duels%20ft.%20Tasis__000060.jpg" class="stream">
+              <div class="title">快來觀看我的直播!</div>
+              <div class="card-live-title">LIVE</div>
+              <div class="fire"><i class="ri-fire-fill"></i> 69K</div>
+              <img src="./static/img/Minecraft.png" class="game">
+              <div class="right-info">
+                <div class="image">
+                  <img src="./static/img/omlet頭貼3.jpg" alt="">
+                </div>
+                <div class="infos">
+                  <span class="name">miki_no_back</span>
+                  <div class="fans-info">
+                    <span class="fans">13500</span>
+                    <span class="fans-text">粉絲</span>
+                  </div>
+                  <span class="lorem">
+                    用子水印一樂得運有三大飯覺起樂，此香一海風們離到們可便城大照的滿得來登童童民下近過國童收技職，曾實要是夠，府風又時不元下止功家市眾善部經我回我公雄到必到作富食衣大連說臺前生顧算，接味間，們社時通學文這好現不走時的院方球生多產金負外統費智道離該。上命訴，你可河立，發一力得壓是，下稱所說得時外、開提隊果……法界長人個你眼，也示發知合去馬只庭她接雄公片夫：大要童其斷光通的間那是費能意北性護有屋道別入才月資；有官說八立在時重目，此最維天裡白性日分黨主部外政已？
+                  </span>
+                </div>
+              </div>
+              <div class="tool">
+                <i class="ri-pause-fill"></i>
+                <i class="ri-volume-down-fill"></i>
+                <i class="ri-fullscreen-fill"></i>
+              </div>
+            </div>
+          </label>
+    
+          <label for="s4" id="slide4">
+            <div class="card">
+              <img src="https://www.giantbomb.com/a/uploads/scale_medium/8/87790/2956731-box_roblox.png" class="stream">
+              <div class="title">自撞娛樂台!吉時娛樂台之當三寶日常</div>
+              <div class="card-live-title">LIVE</div>
+              <div class="fire"><i class="ri-fire-fill"></i> 35K</div>
+              <img src="./static/img/roblox.png" class="game">
+              <div class="right-info">
+                <div class="image">
+                  <img src="./static/img/omlet頭貼4.jpg" alt="">
+                </div>
+                <div class="infos">
+                  <span class="name">hello_jimmy.0825</span>
+                  <div class="fans-info">
+                    <span class="fans">2923</span>
+                    <span class="fans-text">粉絲</span>
+                  </div>
+                  <span class="lorem">
+                    成己不獲明背；然裝企都於感來朋了，氣感也企創、興行從今。
+    
+                    後國天度究相及過公現展；是實不魚容乎說他上積克，清風公此著爸……她養起，提用力而子工事己山有不只實景來比天情和的會音夜質商國善期顯經高能人他？環來外會社種一了強軍企！異近下產美道中過後我便心如觀務天兒的由隊包到。
+                  </span>
+                </div>
+              </div>
+              <div class="tool">
+                <i class="ri-pause-fill"></i>
+                <i class="ri-volume-down-fill"></i>
+                <i class="ri-fullscreen-fill"></i>
+              </div>
+            </div>
+          </label>
+    
+          <label for="s5" id="slide5">
+            <div class="card">
+              <img src="https://dotesports.com/wp-content/uploads/2023/04/minecraft-legends-PvP-win.png" class="stream">
+              <div class="title">快來觀看我的直播!</div>
+              <div class="card-live-title">LIVE</div>
+              <div class="fire"><i class="ri-fire-fill"></i> 1.5K</div>
+              <img src="./static/img/Minecraft.png" class="game">
+              <div class="right-info">
+                <div class="image">
+                  <img src="./static/img/feng_nai.png" alt="">
+                </div>
+                <div class="infos">
+                  <span class="name">Feng_nai</span>
+                  <div class="fans-info">
+                    <span class="fans">13500</span>
+                    <span class="fans-text">粉絲</span>
+                  </div>
+                  <span class="lorem">
+                    情聽常早度興這你記蘭及較少決聞轉道重。
+    
+                    總立話個管想母汽評可就母大的她就太人。或不臉遊中片。過重候，體保力開利死比，能女我城亮：價目度說帶研當度轉那團北便，克係字口為，事是定力象子具及日入件行招因也至待統沒中：活水寫選他級這人風人來命。
+                  </span>
+                </div>
+              </div>
+              <div class="tool">
+                <i class="ri-pause-fill"></i>
+                <i class="ri-volume-down-fill"></i>
+                <i class="ri-fullscreen-fill"></i>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+      
+      <div class="custom-row">
+        <div class="custom-object">
+          <div class="live-title">今日精選</div>
+          <div class="circle"><img src="./static/img/omlet頭貼1.jpg" class="live-circle"></div>
+          <div class="live">LIVE</div>
+          <div class="live-text">今天也不知道要直播什麼XD</div>
+          <div class="live-id">miki_come_back</div>
+        </div>
+        <div class="custom-object">
+          <div class="circle"><img src="./static/img/omlet頭貼2.jpg" class="live-circle"></div>
+          <div class="live">LIVE</div>
+          <div class="live-text">無聊閒聊台</div>
+          <div class="live-id">wglow1031u</div>
+        </div>
+        <div class="custom-object">
+          <div class="circle"><img src="./static/img/omlet頭貼3.jpg" class="live-circle"></div>
+          <div class="live">LIVE</div>
+          <div class="live-text">一人一追蹤 救救魔神娜</div>
+          <div class="live-id">miki_no_back</div>
+        </div>
+        <div class="custom-object">
+          <div class="circle"><img src="./static/img/omletarcade.jpg" class="live-circle"></div>
+          <div class="live">LIVE</div>
+          <div class="live-text">We love u omleter</div>
+          <div class="live-id">omletarcade</div>
+        </div>
+        <div class="custom-object">
+          <div class="circle"><img src="./static/img/omlet tw.jpg" class="live-circle"></div>
+          <div class="live">LIVE</div>
+          <div class="live-text">我們真的很愛OM的大家😭😭😭</div>
+          <div class="live-id">omlet.tw</div>
+        </div>
+        <div class="custom-object">
+          <div class="circle"><img src="./static/img/omlet頭貼4.jpg" class="live-circle"></div>
+          <div class="live">LIVE</div>
+          <div class="live-text">吉時娛樂台之當三寶日常</div>
+          <div class="live-id">hello_jimmy.0825</div>
+        </div>
+      </div>
+      
+      <div class="overlay">
+        <div class="overlay-title">Buy Tokens</div>
+        <div class="wallet">
+          <span class="wallet-text">My Wallet</span>
+          <a class="wallet-amount"><img src="./static/img/token.png">1320</a>
+        </div>
+                <div class="square-row">
+          <div class="square-object">
+            <div class="token-wrapper">
+              <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">70</div>
+              <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$1</div>
+          </div>
+          <div class="square-object">
+            <div class="token-wrapper">
+              <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">350</div>
+              <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$5</div>
+          </div>
+          <div class="square-object">
+            <div class="token-wrapper">
+              <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">720</div>
+              <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$10</div>
+          </div>
+          <div class="square-object">
+            <div class="token-wrapper">
+              <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">1440</div>
+              <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$20</div>
+          </div>
+          <div class="square-object">
+            <div class="token-wrapper">
+              <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">3600</div>
+              <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$50</div>
+          </div>
+          <div class="square-object">
+            <div class="token-wrapper">
+              <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">7500</div>
+              <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$100</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="top-post-box">
+          <div class="post-user-img"><img src="./static/img/omlet頭貼1.jpg"></div>
+          <div class="post-user-input">What's New?</div>
+          <hr class="post-line">
+          <div class="post-bar">
+            <div class="post-item"><i class="ri-image-fill" style="color: orangered;"></i><a class="post-item-text">Image</a></div>
+            <div class="post-item"><i class="ri-pages-fill" style="color:rgb(0, 145, 255);"></i><a class="post-item-text">Story</a></div>
+            <div class="post-item"><i class="ri-video-fill" style="color: rgb(142, 0, 142);"></i><a class="post-item-text">Video</a></div>
+            <div class="post-item"><i class="ri-map-2-line" style="color: rgb(0, 174, 0);"></i><a class="post-item-text">Mod</a></div>
+            <div class="post-item"><i class="ri-live-fill" style="color: rgb(255, 85, 85);"></i><a class="post-item-text">Go Live</a></div>
+          </div>
+        </div>
+
+        <div class="right-event-bar">
+          <div class="ads">
+            <img class="pc-ads" src="./static/img/omlet mc.png" alt="ADS">
+            <div class="ads-title">
+              <span>Start Your Minecraft Multiplayer With Omlet Arcade for PC</span>
+            </div>
+            <div class="ads-btn"><input type="button" value="LEARN NOW"></div>
+          </div>
+          
+          <div class="right-bar-event-name">
+            <span class="right-bar-event">Omlet Event</span>
+            <div class="event-space"></div>
+            <span class="right-bar-saw">See all</span>
+          </div>
+
+          <div class="slideshow">
+            <div class="slide" style="background-image: url('./static/img/omlet event1.png');"></div>
+            <div class="slide" style="background-image: url('./static/img/omelt event2.png');"></div>
+            <div class="slide" style="background-image: url('./static/img/omlet event3.png');"></div>
+          </div>
+          <div style="text-align:center" class="dots">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+          
+          <span class="right-bar-event2">Recommended User</span>
+
+          <div class="recommended">
+            <div class="recommended-box">
+              <div class="recommended-circle"><img src="./static/img/omlet頭貼1.jpg" alt="recommended-user-pic"></div>
+              <div class="recommended-user-info">
+                <div class="recommended-user-id">miki_come_back</div>
+                <div class="recommended-follower">13500 Followers</div>
+                <div class="recommended-info">
+                  生玩求多境他，是下即當日無頭兒：也看著卻共政主解至立山那上此城些們老歌中學；視班國件生談灣總你日國則所是基樣行幾麼情議。不象到的者就水大區點最面；命類間制動年；形學心兒，臺力期一護種有效決經專高。速地未孩。白轉還人清校朋區以再視色以讀待實且進？
+                </div>
+              </div>
+              <div class="recommended-follow-btn">
+                <a class="follow-text">Follow</a>
+              </div>
+              <div class="recommended-game-bar">
+                <div class="game-icon"><img src="./static/img/Minecraft.png" alt="game-icon"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommended-1">
+            <div class="recommended-box-1">
+              <div class="recommended-circle-1"><img src="./static/img/omlet頭貼2.jpg" alt="recommended-user-pic"></div>
+              <div class="recommended-user-info-1">
+                <div class="recommended-user-id-1">wglow1031u</div>
+                <div class="recommended-follower-1">1069 Followers</div>
+                <div class="recommended-info-1">
+                  響力的阿然、們登此年事頭為心著。信西學進到日處？象黨血，業較人子轉海，神一包人知照減本不星，負同來王？兩了應們場畫電軍中就變、樂我你是馬如，路入他用常書間己情出球越離麼木樂資流？年不為兩。香三的相新。步系世、就今有一回查性散做門在開的市一分色自：它白冷世成半層阿重身己生海。
+                </div>
+              </div>
+              <div class="recommended-follow-btn-1">
+                <a class="follow-text-1">Follow</a>
+              </div>
+              <div class="recommended-game-bar-1">
+                <div class="game-icon-1"><img src="./static/img/Minecraft.png" alt="game-icon"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommended-2">
+            <div class="recommended-box-2">
+              <div class="recommended-circle-2"><img src="./static/img/omlet頭貼4.jpg" alt="recommended-user-pic"></div>
+              <div class="recommended-user-info-2">
+                <div class="recommended-user-id-2">hello_jimmy.0825</div>
+                <div class="recommended-follower-2">2923 Followers</div>
+                <div class="recommended-info-2">
+                  響力的阿然、們登此年事頭為心著。信西學進到日處？象黨血，業較人子轉海，神一包人知照減本不星，負同來王？兩了應們場畫電軍中就變、樂我你是馬如，路入他用常書間己情出球越離麼木樂資流？年不為兩。香三的相新。步系世、就今有一回查性散做門在開的市一分色自：它白冷世成半層阿重身己生海。
+                </div>
+              </div>
+              <div class="recommended-follow-btn-2">
+                <a class="follow-text-2">Follow</a>
+              </div>
+              <div class="recommended-game-bar-2">
+                <div class="game-icon-2"><img src="./static/img/roblox.png" alt="game-icon"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="viewr">VIEW MORE</div>
+          <div class="communit">Trending Communities</div>
+
+          <div class="communities">
+            <div class="communities-pic"><img src="./static/img/meme1.jpg" alt="pic"></div>
+            <div class="communities-info">
+              <div class="communit-title">Why You Gay</div>
+              <div class="follow-post">696 Members • 1069 Posts</div>              
+              <div class="communities-text">
+                <a>
+                  響力的阿然、們登此年事頭為心著。信西學進到日處？象黨血，業較人子轉海，神一包人知照減本不星，負同來王？兩了應們場畫電軍中就變、樂我你是馬如，路入他用常書間己情出球越離麼木樂資流？年不為兩。香三的相新。步系世、就今有一回查性散做門在開的市一分色自：它白冷世成半層阿重身己生海。
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="communities-1">
+            <div class="communities-pic-1"><img src="./static/img/meme2.jpg" alt="pic"></div>
+            <div class="communities-info-1">
+              <div class="communit-title-1">Why You Crying</div>
+              <div class="follow-post-1">696 Members • 1069 Posts</div>              
+              <div class="communities-text-1">
+                <a>
+                  響力的阿然、們登此年事頭為心著。信西學進到日處？象黨血，業較人子轉海，神一包人知照減本不星，負同來王？兩了應們場畫電軍中就變、樂我你是馬如，路入他用常書間己情出球越離麼木樂資流？年不為兩。香三的相新。步系世、就今有一回查性散做門在開的市一分色自：它白冷世成半層阿重身己生海。
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div> 
+      </div>
+
+      <div class="game-row">
+        <div class="game-object">
+          <div class="game-box"><img src="./static/img/pubg.png" class="game-pic" alt="game-pic"></div>
+          <div class="game-title">PUBG MOBLIE</div>
+            <div class="user-info-box">          
+              <div class="user-followers">
+              <span class="follower-count">10.6M</span>
+              <a style="color: #999;">粉絲</a>
+            </div>
+            <div class="user-posts">
+              <span class="posts-count">8.5M</span>
+              <a style="color: #999;">貼文</a>
+            </div>  
+          </div>
+        </div>
+
+        <div class="game-object">
+          <div class="game-box"><img src="./static/img/Minecraft.png" class="game-pic" alt="game-pic"></div>
+          <div class="game-title">Minecraft</div>
+            <div class="user-info-box">          
+              <div class="user-followers">
+              <span class="follower-count">13.5M</span>
+              <a style="color: #999;">粉絲</a>
+            </div>
+            <div class="user-posts">
+              <span class="posts-count">10.5M</span>
+              <a style="color: #999;">貼文</a>
+            </div>  
+          </div>
+        </div>
+
+        <div class="game-object">
+          <div class="game-box"><img src="./static/img/roblox.png" class="game-pic" alt="game-pic"></div>
+          <div class="game-title">ROBLOX</div>
+            <div class="user-info-box">          
+              <div class="user-followers">
+              <span class="follower-count">3.5M</span>
+              <a style="color: #999;">粉絲</a>
+            </div>
+            <div class="user-posts">
+              <span class="posts-count">5.1M</span>
+              <a style="color: #999;">貼文</a>
+            </div>  
+          </div>
+        </div>
+        
+        <div class="game-object">
+          <div class="game-box"><img src="./static/img/LOL.png" class="game-pic" alt="game-pic"></div>
+          <div class="game-title">LOL</div>
+            <div class="user-info-box">          
+              <div class="user-followers">
+              <span class="follower-count">13.5M</span>
+              <a style="color: #999;">粉絲</a>
+            </div>
+            <div class="user-posts">
+              <span class="posts-count">10.5M</span>
+              <a style="color: #999;">貼文</a>
+            </div>  
+          </div>
+        </div>
+      </div>
+
+      <div class="posts">
+        <div class="post-box">
+          <div class="post-circle">
+            <img src="./static/img/omlet頭貼1.jpg" class="post-pic" alt="post-user-pic">
+          </div>
+          <div class="post-user-info">
+            <div class="post-username"><a>miki_come_back</a>
+              <div class="follow-btn">
+                <i class="ri-add-fill"></i>
+                <a class="follow-text">Follow</a>
+              </div>
+            </div>
+            <div class="post-time">14hr ago • Minecraft</div>
+          </div>
+          <div class="posts-spacer"></div>
+          <div class="posts-item">
+            <span class="icon-text">Minecraft</span>
+            <div class="post-icon"><img src="./static/img/Minecraft.png" alt="game-icon"></div>
+          </div>
+        </div>
+        <div class="posts-title">安安! 這是我第一次蓋的地圖好看嗎?</div>
+        <div class="posts-subtitle">
+          其實我也不知道要打什麼，反正這只是一個紀念用的web。RIP OMLET ARCADE
+          然後他就死掉了GG麼病了以此記天臺作陽社，麼失好時色？聽加呢專兒素題發情動己站也願母久用，表各就決一電克不由顯消對高二對大出連，相打說我。得門告詩然子個線？
+
+          臉不過？全愛然山我認靜當家集喜本愛位不學關健變滿……作我值畫持課我業全站光照企學天！斯出病外東哥熱活年市法。
+        </div>
+        <div class="posts-pic">
+          <img src="./static/img/omlet event1.png" alt="posts-pic">
+        </div>
+        <div class="posts-tool">
+          <i class="ri-heart-fill" id="like-btn">喜歡</i>
+          <i class="ri-chat-1-fill"> 評論</i>
+          <i class="ri-money-dollar-circle-fill" style="color: gold;"> BUFF</i>
+          <i class="ri-share-fill"> 分享</i>
+        </div>
+      </div>     
+
+      <div class="posts">
+        <div class="post-box">
+          <div class="post-circle">
+            <img src="./static/img/omlet頭貼2.jpg" class="post-pic" alt="post-user-pic">
+          </div>
+          <div class="post-user-info">
+            <div class="post-username"><a>wglow1031u</a>
+              <div class="follow-btn">
+                <i class="ri-add-fill"></i>
+                <a class="follow-text">Follow</a>
+              </div>
+            </div>
+            <div class="post-time">14hr ago • Minecraft</div>
+          </div>
+          <div class="posts-spacer"></div>
+          <div class="posts-item">
+            <span class="icon-text">Minecraft</span>
+            <div class="post-icon"><img src="./static/img/Minecraft.png" alt="game-icon"></div>
+          </div>
+        </div>
+        <div class="posts-title">這是我第一次參加這些比賽!</div>
+        <div class="posts-subtitle">
+          其實我也不知道要打什麼，反正這只是一個紀念用的web。RIP OMLET ARCADE
+          然後他就死掉了GG麼病了以此記天臺作陽社，麼失好時色？聽加呢專兒素題發情動己站也願母久用，表各就決一電克不由顯消對高二對大出連，相打說我。得門告詩然子個線？
+
+          臉不過？全愛然山我認靜當家集喜本愛位不學關健變滿……作我值畫持課我業全站光照企學天！斯出病外東哥熱活年市法。
+        </div>
+        <div class="posts-pic">
+          <img src="./static/img/omelt event2.png" alt="posts-pic">
+        </div>
+        <div class="posts-tool">
+          <i class="ri-heart-fill" id="like-btn2">喜歡</i>
+          <i class="ri-chat-1-fill"> 評論</i>
+          <i class="ri-money-dollar-circle-fill" style="color: gold;"> BUFF</i>
+          <i class="ri-share-fill"> 分享</i>
+        </div>
+      </div>
+
+      <div class="posts">
+        <div class="post-box">
+          <div class="post-circle">
+            <img src="./static/img/cici.png" class="post-pic" alt="post-user-pic">
+          </div>
+          <div class="post-user-info">
+            <div class="post-username"><a>cicilove5455</a>
+              <div class="follow-btn">
+                <i class="ri-add-fill"></i>
+                <a class="follow-text">Follow</a>
+              </div>
+            </div>
+            <div class="post-time">14hr ago • Minecraft</div>
+          </div>
+          <div class="posts-spacer"></div>
+          <div class="posts-item">
+            <span class="icon-text">Minecraft</span>
+            <div class="post-icon"><img src="./static/img/Minecraft.png" alt="game-icon"></div>
+          </div>
+        </div>
+        <div class="posts-title">CiCi的每日發情次數 100/100!</div>
+        <div class="posts-subtitle">
+          為了miki才留在om，誰知om比miki先gg了(＠_＠;)
+        </div>
+        <div class="posts-pic">
+          <img src="./static/img/好色喔.pngbecxdws" alt="posts-pic">
+        </div>
+        <div class="posts-tool">
+          <i class="ri-heart-fill" id="like-btn2">喜歡</i>
+          <i class="ri-chat-1-fill"> 評論</i>
+          <i class="ri-money-dollar-circle-fill" style="color: gold;"> BUFF</i>
+          <i class="ri-share-fill"> 分享</i>
+        </div>
+      </div>
+
+      <div class="posts">
+        <div class="post-box">
+          <div class="post-circle">
+            <img src="./static/img/omlet頭貼4.jpg" class="post-pic" alt="post-user-pic">
+          </div>
+          <div class="post-user-info">
+            <div class="post-username"><a>hello_jimmy.0825</a>
+              <div class="follow-btn">
+                <i class="ri-add-fill"></i>
+                <a class="follow-text">Follow</a>
+              </div>
+            </div>
+            <div class="post-time">14hr ago • Minecraft</div>
+          </div>
+          <div class="posts-spacer"></div>
+          <div class="posts-item">
+            <span class="icon-text">Minecraft</span>
+            <div class="post-icon"><img src="./static/img/Minecraft.png" alt="game-icon"></div>
+          </div>
+        </div>
+        <div class="posts-title">這是我第一次參加這些比賽!</div>
+        <div class="posts-subtitle">
+          其實我也不知道要打什麼，反正這只是一個紀念用的web。RIP OMLET ARCADE
+          然後他就死掉了GG麼病了以此記天臺作陽社，麼失好時色？聽加呢專兒素題發情動己站也願母久用，表各就決一電克不由顯消對高二對大出連，相打說我。得門告詩然子個線？
+
+          臉不過？全愛然山我認靜當家集喜本愛位不學關健變滿……作我值畫持課我業全站光照企學天！斯出病外東哥熱活年市法。
+        </div>
+        <div class="posts-pic">
+          <img src="./static/img/omelt event2.png" alt="posts-pic">
+        </div>
+        <div class="posts-tool">
+          <i class="ri-heart-fill" id="like-btn3">喜歡</i>
+          <i class="ri-chat-1-fill"> 評論</i>
+          <i class="ri-money-dollar-circle-fill" style="color: gold;"> BUFF</i>
+          <i class="ri-share-fill"> 分享</i>
+        </div>
+      </div>
+
+      <div class="posts">
+        <div class="post-box">
+          <div class="post-circle">
+            <img src="./static/img/omlet頭貼3.jpg" class="post-pic" alt="post-user-pic">
+          </div>
+          <div class="post-user-info">
+            <div class="post-username"><a>89tank64</a>
+              <div class="follow-btn">
+                <i class="ri-add-fill"></i>
+                <a class="follow-text">Follow</a>
+              </div>
+            </div>
+            <div class="post-time">14hr ago • Minecraft</div>
+          </div>
+          <div class="posts-spacer"></div>
+          <div class="posts-item">
+            <span class="icon-text">Minecraft</span>
+            <div class="post-icon"><img src="./static/img/Minecraft.png" alt="game-icon"></div>
+          </div>
+        </div>
+        <div class="posts-title">安安!這是我自己做的頭像!</div>
+        <div class="posts-subtitle">
+          omlet arcade屁孩因何而發生？蘇格拉底講過，驕傲是無知的產物。強烈建議大家把這段話牢牢記住。車爾尼雪夫斯基講過，只有在新的社會條件下勞動才能從繁重的負擔轉變成輕鬆而愉快的生理要求的滿足。這不禁令我重新仔細的思考。面對如此難題，我們必須設想周全。現在，正視omlet arcade屁孩的問題，是非常非常重要的。因為，劉心武說過，理想不是一隻細磁碗，破碎了不能鋦補; 理想是朵花，謝落了可以重新開放。但願諸位理解後能從中有所成長。生活中，若omlet arcade屁孩出現了，我們就不得不考慮它出現了的事實。
+        </div>
+        <div class="posts-pic">
+          <img src="./static/img/omlet event3.png" alt="posts-pic">
+        </div>
+        <div class="posts-tool">
+          <i class="ri-heart-fill" id="like-btn4">喜歡</i>
+          <i class="ri-chat-1-fill"> 評論</i>
+          <i class="ri-money-dollar-circle-fill" style="color: gold;"> BUFF</i>
+          <i class="ri-share-fill"> 分享</i>
+        </div>
+
+      </div>      
+
+      <script>
+        // JavaScript程式碼
+        function toggleDropdown(event) {
+          event.preventDefault();
+          var dropdown = event.target.parentNode;
+          dropdown.classList.toggle("show");
+      
+          // 檢查右側邊界碰撞
+          var dropdownContent = dropdown.querySelector(".dropdown-content");
+          var rect = dropdownContent.getBoundingClientRect();
+          var windowWidth = window.innerWidth;
+          if (rect.right > windowWidth) {
+            var shiftAmount = rect.right - windowWidth + 10; // 1為右側留白距離
+            var leftPosition = parseInt(getComputedStyle(dropdownContent).left, 10);
+            var adjustedLeftPosition = leftPosition - shiftAmount;
+            dropdownContent.style.left = Math.max(adjustedLeftPosition, 0) + "px";
+          } else {
+            dropdownContent.style.left = "auto";
+          }
+        }
+      
+        window.addEventListener("click", function(event) {
+          var dropdowns = document.getElementsByClassName("dropdown");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var dropdown = dropdowns[i];
+            if (!dropdown.contains(event.target)) {
+              dropdown.classList.remove("show");
+              var dropdownContent = dropdown.querySelector(".dropdown-content");
+              dropdownContent.style.left = "auto"; // 重置left樣式
+            }
+          }
+        });
+      </script>
+
+      <script>
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const numSlides = slides.length;
+
+        let currentSlide = 0;
+        const interval = 2000;
+
+        function showSlide(index) {
+          slides.forEach(slide => slide.classList.remove('active'));
+          slides[index].classList.add('active');
+
+          dots.forEach(dot => dot.classList.remove('active'));
+          dots[index].classList.add('active');
+        }
+
+        function autoSlide() {
+          currentSlide = (currentSlide + 1) % numSlides;
+          showSlide(currentSlide);
+        }
+
+        setInterval(autoSlide, interval);
+
+      </script>
+      <script>
+        const tokenButton = document.querySelector('.token');
+        const overlay = document.querySelector('.overlay');
+
+        tokenButton.addEventListener('click', (event) => {
+          event.stopPropagation();
+          overlay.style.display = 'block';
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!tokenButton.contains(event.target) && !overlay.contains(event.target)) {
+            overlay.style.display = 'none';
+          }
+        });
+      </script>
+      <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("chatDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.ri-message-2-fill')) {
+            var dropdowns = document.getElementsByClassName("chat-dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+    </body>
+</html>
