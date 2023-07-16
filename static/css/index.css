@@ -958,6 +958,7 @@ a{
 }
 
 .right-event-bar .ads {
+  position: relative;
   width: 370px;
   height: 100%;
   background-position: center; /* 將圖片置於容器中心 */
@@ -976,10 +977,11 @@ a{
 }
 
 .right-event-bar .ads-title{
+  display: flex;
   color: #fff;
   font-size: 25px;
   font-weight: bold;
-  margin-top: -25vh;
+  margin-top: -15vh;
   margin-left: 35px;
   align-items: center;
   text-align: center;
@@ -1164,9 +1166,8 @@ a{
 }
 
 .posts-subtitle{
-  margin-left: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  position: relative;
+  padding: 1vh 1.8vh 1vh 1.8vh;
   color: #e4e4e4;
   min-width: 580px;
   height: auto;
