@@ -301,10 +301,14 @@ body{
     overflow: hidden;
   }
   
-  .chat-item-info .chat-msg span{
+  .chat-item-info .chat-msg span {
     font-weight: 500;
     font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
+  
   
   .show {display: block;}
   
@@ -715,4 +719,155 @@ body{
   background-color: #171927;
   color: #fff;
   padding: 3px 3px 3px 3px;
+}
+
+#chatDisplay {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  height: 400px;
+  background-color: #424457;
+  z-index: 9999;
+  border-top-left-radius: 1vh;
+  border-top-right-radius: 1vh;
+  cursor: default;
+}
+
+#chatDisplay i{
+  color: #fff;
+}
+
+.custom-chat-info {
+  position: absolute;
+  width: 100%;
+  background-color: #24263a;
+  border-top-left-radius: 1vh;
+  border-top-right-radius: 1vh;
+  padding-bottom: 45px; /* 增加底部内边距，以容纳custom-tool */
+}
+
+.custom-user-info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-user-info i{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.custom-user-name{
+  position: absolute;
+  left: 6vh;
+  top: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.custom-user-pic {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.custom-user-pic::after{
+  content: "";
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(0, 255, 0);
+  border-radius: 50%;
+}
+
+.custom-user-pic img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.custom-chat-box{
+  position: absolute;
+  top: 3vw;
+}
+
+.custom-chat-box i{
+  position: absolute;
+  top: 3.2vw;
+  left: 15.8vw;
+}
+
+.custom-chat-user-pic {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.custom-chat-user-pic img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.custom-chat-user-name{
+  position: absolute;
+  left: 6vh;
+  top: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.custom-msg {
+  position: absolute;
+  left: 6vh;
+  top: 2.5vw;
+  font-weight: 500;
+  background-color: #777;
+  color: #fff;
+  width: 180px;
+  height: auto;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  overflow: hidden;
+  white-space: normal;
+  position: relative;
+}
+
+#close{
+  font-size: 25px;
+}
+
+.custom-tool {
+  position: absolute;
+  top: 24vw;
+  width: 290px;
+  background-color: #24263a;
+  align-items: center;
+  padding: 6px 5px 5px 5px;
+}
+
+.custom-tool input{
+  width: 13.3vw;
+  background-color: #2d2f41;
+  color: #fff;
+  border-radius: 3px;
+  border-style: none;
+}
+
+.custom-tool i{
+  padding: 0 3px 0 3px;
+  cursor: pointer;
 }
