@@ -1,0 +1,118 @@
+/* Define shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(5px); }
+}
+
+/* Apply shake animation to body when the shake class is added */
+body.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+    background-color: rgba(22,23,32); /* 深色系背景色 */
+    color: #fff; /* 文字颜色为白色 */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+  }
+  
+  .container {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1); /* 半透明的浅色背景 */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  h1 {
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .logo{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-left: 11vw;
+  }
+
+  .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .logo-text{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+  }
+
+  .logo-text img{
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f1f1f1; /* 浅灰色背景 */
+  }
+
+  .forgot {
+    display: flex; /* 将 .forgot 元素设置为弹性容器 */
+    justify-content: space-between; /* 内部元素平均分散排列 */
+    padding: 10px 5px 5px 0;
+  }
+  
+  .forgot a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  button {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: orangered; /* 蓝色背景 */
+    font-weight: 900;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    transition: all 470ms ease-in-out;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    transition: all 470ms ease-in-out;
+    background-color: rgb(201, 54, 0); /* 深蓝色背景 */
+  }
+

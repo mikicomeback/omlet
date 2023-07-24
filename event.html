@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>活動</title>
+        <link rel="stylesheet" href="./static/css/event.css">
+        <link rel="shortcut icon" href="./static/img/omlet.ico" type="image/x-icon" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      </head>
+    <body>
+        <div class="navbar">
+            <ul>
+              <li class="logo">
+                <a href="./index.html"><img src="./static/img/omlet_logo.png" alt="Text"></a>
+              </li>
+              <li class="text">
+                <a href="./index.html"><img src="./static/img/abc.png" alt="Text"></a>
+              </li>
+              <li><a href="#">直播</a></li>
+              <li><a href="#">遊戲</a></li>
+              <li><a href="#">論壇</a></li>
+              <li><a href="./event.html">活動</a></li>
+              <li><a href="#">進階方案</a></li>
+              <li class="dropdown">
+                <a href="#" onclick="toggleDropdown(event)">更多<i class="ri-arrow-down-s-fill"></i></a>
+                <div class="dropdown-content">
+                  <a href="./setting.html">Omlet Connect</a>
+                  <a href="./setting.html">直播你的電腦遊戲</a>
+                  <a href="#">陪玩</a>
+                  <a href="#">啟用全球模式</a>
+                  <a href="#">常見問題&尋求幫助</a>
+                  <a href="#">使用者規範</a>
+                  <a href="#">保密協定</a>
+                </div>
+              </li>
+            </ul>
+            <div class="right-items-container">
+              <ul class="right-items">
+                <li>
+                  <div class="search-container">
+                    <i class="ri-search-line"></i>
+                    <input type="search" placeholder="搜尋" class="search-box">
+                  </div>
+                </li>
+                <div class="chat-dropdown">
+                  <li id="icon">
+                    <img src="./static/img/oma_btn_communitypage_chat_normal.svg" style="margin-right: -5px;" class="ri-message-2-fill" onclick="myFunction()">
+                  </li>
+                  <div id="chatDropdown" class="chat-dropdown-content">
+                    <div class="chat-column">
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/omlet頭貼3.jpg" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>89tank64</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>
+                              聊天因何而發生？這樣看來，謹慎地來說，我們必須考慮到所有可能。問題的關鍵究竟為何？聊天改變了我的命運。若沒有聊天的存在，那麼後果可想而知。
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+                
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/omlet頭貼2.jpg" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>wglow1031u</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>
+                              每個人的一生中，幾乎可說碰到聊天這件事，是必然會發生的。儘管如此，別人往往卻不這麼想。由於，儘管聊天看似不顯眼，卻佔據了我的腦海。
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+                
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/omlet頭貼4.jpg" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>hello_jimmy.0825</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>
+                              若能夠欣賞到聊天的美，相信我們一定會對聊天改觀。馮夢龍曾提出，不可以一時之譽，斷其為君子，不呆以一時之謗，斷其為小人。希望各位能用心體會這段話。
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+                
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/feng_nai.png" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>feng_nai</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>
+                              司各特說過一句很有意思的話，多數人的失敗，都始於懷疑他們自己在想做的事情上的能力。他會這麼說是有理由的。魯迅曾經提到過，單是說不行，要緊的是做。這段話看似複雜，其中的邏輯思路卻清晰可見。在人類的歷史中，我們總是盡了一切努力想搞懂聊天。
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+                
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/omlet頭貼5.jpg" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>miki_dont_back</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>
+                              魯藜說過一句經典的名言，老是把自己當成珍珠，就時時有被埋沒的痛苦，把自己當作泥土吧，讓眾人把你踩成一條道路。這段話的餘韻不斷在我腦海中迴盪著。而這些並不是完全重要，更加重要的問題是，聊天的存在，令我無法停止對他的思考。
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+                
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/omlet頭貼6.jpg" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>miki_cant_back</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>
+                              話雖如此，話雖如此，我們卻也不能夠這麼篤定。馬克思說過一句富有哲理的話，思考一切。希望大家能發現話中之話。領悟其中的道理也不是那麼的困難。我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。我以為我了解聊天，但我真的了解聊天嗎？仔細想想，我對聊天的理解只是皮毛而已。
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+                
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/omletarcade.jpg" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>omletarcade</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>
+                              MSJXvHIoouercqMqKRHUFVnxjvjrHPklvuevCNCOTRklrHPVmirfPePmXmKNlgda
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+                
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/omlet tw.jpg" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>omlet.tw</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>
+                              世界上若沒有聊天，對於人類的改變可想而知。伊壁鳩魯相信，在確保終身幸福的所有努力中，最重要的是結識朋友。這讓我對於看待這個問題的方法有了巨大的改變。
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+                
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/魔神娜.png" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>malshinna</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>
+                              既然，問題的核心究竟是什麼？
+      
+                              孟子說過，育才造士，為國之本。這把視野帶到了全新的高度。範戴克說過一句著名的話，教養就是習慣於從最美好的事物中得到滿足而且知道為什麼。希望大家能發現話中之話。生活中，若聊天出現了，我們就不得不考慮它出現了的事實。
+                            </span>
+                          </div>
+                        </div>  
+                      </div>
+      
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/Minecraft.png" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>Minecraft Bedrock</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>Player 已加入。</span>
+                          </div>
+                        </div>  
+                      </div>
+                
+                      <div class="chat-box-info" onclick="displayChatInfo(this)">
+                        <div class="chat-user-pic">
+                          <img src="./static/img/roblox.png" alt="chat-user-pic">
+                        </div>
+                        <div class="chat-item-info">
+                          <div class="chat-user-name">
+                            <span>Roblox Group</span>
+                          </div>
+                          <div class="chat-msg">
+                            <span>Player 已加入。</span>
+                          </div>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="chatDisplay"></div>
+                  <li id="icon"><img src="./static/img/oma_ic_followerlist_off.svg"></li>
+                  <div class="news-dropdown">
+                    <li id="icon">
+                      <i class="ri-notification-2-fill" onclick="newsFunction()"></i>
+                    </li>
+                    <div id="newsDropdown" class="news-dropdown-content">
+                      <div class="news-column">
+                        <div class="news-bar">
+                          <div class="news-bar-left" id="news-bar-left" onclick="showContent('left')">
+                            <span>我</span>
+                          </div>
+                          <div class="news-bar-right" id="news-bar-right" onclick="showContent('right')">
+                            <span>Omlet</span>
+                          </div>
+                        </div>                
+                        <div class="news-box-info">
+                          <div id="news-bar-left-content" class="content" style="display: none;">
+                            <!-- 左側內容 -->
+                            <div class="news">
+                              <div class="news-title">
+                                <span>New</span>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet頭貼2.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">wglow1031u Buff了你的貼文</span>
+                                  <span class="news-text-time">19 秒鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/IRL.png" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet頭貼3.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">89tank64 Buff了你的貼文</span>
+                                  <span class="news-text-time">19 秒鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/IRL.png" alt="左側圖片2">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ago">
+                              <div class="news-title">
+                                <span>稍早</span>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet頭貼3.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">89tank64 在你的貼文留言</span>
+                                  <span class="news-text-time">19 秒鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/火山.png" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet頭貼4.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">hello_jimmy.0825 Buff了你的貼文</span>
+                                  <span class="news-text-time">1 小時前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/buff_icon_1.svg" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet頭貼5.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">miki_no_back 喜歡你的貼文，Omlet Arcade is Death</span>
+                                  <span class="news-text-time">19 分鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/buff_icon_2.svg" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet頭貼6.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">miki_dont_back 在你的貼文留言，哈哈哈哈</span>
+                                  <span class="news-text-time">47 分鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/pubg.png" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet tw.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">omlet.tw Buff了你的貼文</span>
+                                  <span class="news-text-time">19 秒鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/IRL.png" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omletarcade.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">omletarcade Buff了你的貼文</span>
+                                  <span class="news-text-time">59 分鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/Minecraft.png" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet th.png" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">omlet.th Buff了你的貼文</span>
+                                  <span class="news-text-time">7 小時前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/IRL.png" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet es.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">omlet.es 在你的貼文留言，wow so cool!</span>
+                                  <span class="news-text-time">1 分鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/Minecraft.png" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/cici.png" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">cici Buff了你的貼文</span>
+                                  <span class="news-text-time">9 分鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/McluuQal.jpg" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/feng_nai.png" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">feng_nai 在你的貼文留言，哇! 可以幫我寫CSS嗎(X</span>
+                                  <span class="news-text-time">59 分鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/meme1.jpg" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/omlet id.jpg" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">omlet.id 喜歡你的貼文，哇 羅沃怎麼那麼色!</span>
+                                  <span class="news-text-time">59 分鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/meme2.jpg" alt="左側圖片2">
+                                </div>
+                              </div>
+                              <div class="news-row">
+                                <div class="news-image">
+                                  <img src="./static/img/魔神娜.png" alt="左側圖片">
+                                </div>
+                                <div class="news-text">
+                                  <span class="news-text-title">malshinna 喜歡你的貼文，哇 羅沃也太色了吧!</span>
+                                  <span class="news-text-time">17 分鐘前</span>
+                                </div>
+                                <div class="news-image-last">
+                                  <img src="./static/img/omlet event1.png" alt="左側圖片2">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="news-bar-right-content" class="content" style="display: none;">
+                            <!-- 右側內容 -->
+                            <div class="news-row">
+                              <div class="news-image">
+                                <img src="./static/img/omlet頭貼4.jpg" alt="右側圖片">
+                              </div>
+                              <div class="news-text">
+                                <span class="news-text-title">hello_jimmy.0825 Buff了你的貼文</span>
+                                <span class="news-text-time">59 秒鐘前</span>
+                              </div>
+                              <div class="news-image-last">
+                                <img src="./static/img/LOL.png" alt="右側圖片2">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 其他新聞項目... -->
+                      </div>
+                    </div>
+                  </div>
+                  <li id="icon"><i class="ri-store-3-fill"></i></li>
+                  <li class="token"><a><img src="./static/img/token.png" >購買OM幣</a></li>
+                  <li class="profile">
+                    <img src="./static/img/McluuQal.jpg">
+                  </li>
+                  <li class="dropdown dropdown-profile">
+                    <a href="#" onclick="toggleDropdown(event)">miki_come_back</a>
+                    <div class="dropdown-content">
+                      <a href="./setting.html">直播你的電腦遊戲</a>
+                      <a href="./dashboard.html">直播控制台</a>
+                      <a href="#">直播紀錄</a>
+                      <a href="#">帳號設定</a>
+                      <a href="#">獲取認證</a>
+                      <a href="./login.html">登出</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+    <div class="overlay">
+        <div class="overlay-title">Buy Tokens</div>
+        <div class="wallet">
+            <span class="wallet-text">My Wallet</span>
+            <a class="wallet-amount"><img src="./static/img/buff_icon_1.svg">1320</a>
+        </div>
+                <div class="square-row">
+            <div class="square-object">
+            <div class="token-wrapper">
+                <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">70</div>
+                <img src="./static/img/buff_icon_1.svg" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$1</div>
+            </div>
+            <div class="square-object">
+            <div class="token-wrapper">
+                <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">350</div>
+                <img src="./static/img/buff_icon_2.svg" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$5</div>
+            </div>
+            <div class="square-object">
+            <div class="token-wrapper">
+                <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">720</div>
+                <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$10</div>
+            </div>
+            <div class="square-object">
+            <div class="token-wrapper">
+                <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">1440</div>
+                <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$20</div>
+            </div>
+            <div class="square-object">
+            <div class="token-wrapper">
+                <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">3600</div>
+                <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$50</div>
+            </div>
+            <div class="square-object">
+            <div class="token-wrapper">
+                <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">7500</div>
+                <img src="./static/img/token.png" class="token-ex">
+            </div>
+            <div class="overlay-text">USD$100</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+      <div class="container">
+        <h1>官方活動</h1>
+        <div class="items-container">
+          <div class="row">
+            <div class="item">
+              <div class="item-content">
+                <div class="item-img">
+                  <img src="./static/img/omlet event1.png">
+                </div>
+                <div class="info-box">
+                  <div class="event-date" id="date">
+                    <div class="MM" id="month">
+                      <span>NOV</span>
+                    </div>
+                    <div class="DD">
+                      <span>9</span>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <div class="event-title">
+                      <span>Omlet 80M events!!!</span>
+                    </div>
+                    <div class="event-time">
+                      <span>6/9 10:00 - 6/10 16:00</span>
+                    </div>
+                    <div class="event-player">
+                      <img src="./static/img/Omlet_Arcade_logo.png" class="player-pic">
+                      <span>omletarcade</span>
+                      <img src="./static/img/oma_btn_quiz_select.svg">
+                    </div>
+                  </div>
+                  <div class="event-like">
+                    <div class="event-like-img">
+                      <img src="./static/img/omp_btn_chat_like_gray.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-content">
+                <div class="item-img">
+                  <img src="./static/img/omelt event2.png">
+                </div>
+                <div class="info-box">
+                  <div class="event-date" id="date">
+                    <div class="MM" id="month">
+                      <span>OCT</span>
+                    </div>
+                    <div class="DD">
+                      <span>19</span>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <div class="event-title">
+                      <span>Arena Game 1v1 events!</span>
+                    </div>
+                    <div class="event-time">
+                      <span>1/19 16:00 - 1/20 19:00</span>
+                    </div>
+                    <div class="event-player">
+                      <img src="./static/img/omlet es.jpg" class="player-pic">
+                      <span>omlet.es</span>
+                      <img src="./static/img/oma_btn_quiz_select.svg">
+                    </div>
+                  </div>
+                  <div class="event-like">
+                    <div class="event-like-img">
+                      <img src="./static/img/omp_btn_chat_like_gray.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-content">
+                <div class="item-img">
+                  <img src="./static/img/omlet event3.png">
+                </div>
+                <div class="info-box">
+                  <div class="event-date">
+                    <div class="MM">
+                      <span>JUI</span>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <div class="event-title">
+                      <span>Pubg Mobile 4v4 enets</span>
+                    </div>
+                    <div class="event-time">
+                      <span>6/9 10:00 - 6/10 16:00</span>
+                    </div>
+                    <div class="event-player">
+                      <img src="./static/img/Omlet_Arcade_logo.png" class="player-pic">
+                      <span>omlet.ph</span>
+                      <img src="./static/img/oma_btn_quiz_select.svg">
+                    </div>
+                  </div>
+                  <div class="event-like">
+                    <div class="event-like-img">
+                      <img src="./static/img/omp_btn_chat_like_gray.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          </div>
+          <div class="row">
+            <div class="item">
+              <div class="item-content">
+                <div class="item-img">
+                  <img src="./static/img/omlet event4.png">
+                </div>
+                <div class="info-box">
+                  <div class="event-date">
+                    <div class="MM">
+                      <span>OCT</span>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <div class="event-title">
+                      <span>80M Avatar on air</span>
+                    </div>
+                    <div class="event-time">
+                      <span>6/23 10:00 - 6/24 16:00</span>
+                    </div>
+                    <div class="event-player">
+                      <img src="./static/img/Omlet_Arcade_logo.png" class="player-pic">
+                      <span>omletarcade</span>
+                      <img src="./static/img/oma_btn_quiz_select.svg">
+                    </div>
+                  </div>
+                  <div class="event-like">
+                    <div class="event-like-img">
+                      <img src="./static/img/omp_btn_chat_like_gray.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-content">
+                <div class="item-img">
+                  <img src="./static/img/omlet event5.png">
+                </div>
+                <div class="info-box">
+                  <div class="event-date" id="date">
+                    <div class="MM" id="month">
+                      <span>MAY</span>
+                    </div>
+                    <div class="DD">
+                      <span>24</span>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <div class="event-title">
+                      <span>congratulations omlet </span>
+                    </div>
+                    <div class="event-time">
+                      <span>6/24 10:00 - 6/25 16:00</span>
+                    </div>
+                    <div class="event-player">
+                      <img src="./static/img/Omlet_Arcade_logo.png" class="player-pic">
+                      <span>omlet.ph</span>
+                      <img src="./static/img/oma_btn_quiz_select.svg">
+                    </div>
+                  </div>
+                  <div class="event-like">
+                    <div class="event-like-img">
+                      <img src="./static/img/omp_btn_chat_like_gray.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-content">
+                <div class="item-img">
+                  <img src="./static/img/omlet event6.png">
+                </div>
+                <div class="info-box">
+                  <div class="event-date">
+                    <div class="MM">
+                      <span>OCT</span>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <div class="event-title">
+                      <span>LoL 1v1 Events</span>
+                    </div>
+                    <div class="event-time">
+                      <span>6/19 10:00 - 6/20 11:00</span>
+                    </div>
+                    <div class="event-player">
+                      <img src="./static/img/Omlet_Arcade_logo.png" class="player-pic">
+                      <span>omlet.ph</span>
+                      <img src="./static/img/oma_btn_quiz_select.svg">
+                    </div>
+                  </div>
+                  <div class="event-like">
+                    <div class="event-like-img">
+                      <img src="./static/img/omp_btn_chat_like_gray.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          </div>
+          <div class="row">
+            <div class="item">
+              <div class="item-content">
+                <div class="item-img">
+                  <img src="./static/img/omlet event7.png">
+                </div>
+                <div class="info-box">
+                  <div class="event-date">
+                    <div class="MM">
+                      <span>JAN</span>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <div class="event-title">
+                      <span>i dont know Events</span>
+                    </div>
+                    <div class="event-time">
+                      <span>6/9 10:00 - 6/10 16:00</span>
+                    </div>
+                    <div class="event-player">
+                      <img src="./static/img/Omlet_Arcade_logo.png" class="player-pic">
+                      <span>omletarcade</span>
+                      <img src="./static/img/oma_btn_quiz_select.svg">
+                    </div>
+                  </div>
+                  <div class="event-like">
+                    <div class="event-like-img">
+                      <img src="./static/img/omp_btn_chat_like_gray.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-content">
+                <div class="item-img">
+                  <img src="./static/img/omlet event10.jpg">
+                </div>
+                <div class="info-box">
+                  <div class="event-date" id="date">
+                    <div class="MM" id="month">
+                      <span>OCT</span>
+                    </div>
+                    <div class="DD">
+                      <span>18</span>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <div class="event-title">
+                      <span>我們又來環遊世界啦!</span>
+                    </div>
+                    <div class="event-time">
+                      <span>9/18 12:00 - 9/19 13:00</span>
+                    </div>
+                    <div class="event-player">
+                      <img src="./static/img/omlet tw.jpg" class="player-pic">
+                      <span>omlet.tw</span>
+                      <img src="./static/img/oma_btn_quiz_select.svg">
+                    </div>
+                  </div>
+                  <div class="event-like">
+                    <div class="event-like-img">
+                      <img src="./static/img/omp_btn_chat_like_gray.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-content">
+                <div class="item-img">
+                  <img src="./static/img/omlet event9.png">
+                </div>
+                <div class="info-box">
+                  <div class="event-date" id="date">
+                    <div class="MM" id="month">
+                      <span>OCT</span>
+                    </div>
+                    <div class="DD">
+                      <span>30</span>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <div class="event-title">
+                      <span>LOL Moblie Events</span>
+                    </div>
+                    <div class="event-time">
+                      <span>6/30 00:00 - 6/30 23:59</span>
+                    </div>
+                    <div class="event-player">
+                      <img src="./static/img/Omlet_Arcade_logo.png" class="player-pic">
+                      <span>omletarcade</span>
+                      <img src="./static/img/oma_btn_quiz_select.svg">
+                    </div>
+                  </div>
+                  <div class="event-like">
+                    <div class="event-like-img">
+                      <img src="./static/img/omp_btn_chat_like_gray.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <script>
+        // JavaScript程式碼
+        function toggleDropdown(event) {
+          event.preventDefault();
+          var dropdown = event.target.parentNode;
+          dropdown.classList.toggle("show");
+      
+          // 檢查右側邊界碰撞
+          var dropdownContent = dropdown.querySelector(".dropdown-content");
+          var rect = dropdownContent.getBoundingClientRect();
+          var windowWidth = window.innerWidth;
+          if (rect.right > windowWidth) {
+            var shiftAmount = rect.right - windowWidth + 10; // 1為右側留白距離
+            var leftPosition = parseInt(getComputedStyle(dropdownContent).left, 10);
+            var adjustedLeftPosition = leftPosition - shiftAmount;
+            dropdownContent.style.left = Math.max(adjustedLeftPosition, 0) + "px";
+          } else {
+            dropdownContent.style.left = "auto";
+          }
+        }
+      
+        window.addEventListener("click", function(event) {
+          var dropdowns = document.getElementsByClassName("dropdown");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var dropdown = dropdowns[i];
+            if (!dropdown.contains(event.target)) {
+              dropdown.classList.remove("show");
+              var dropdownContent = dropdown.querySelector(".dropdown-content");
+              dropdownContent.style.left = "auto"; // 重置left樣式
+            }
+          }
+        });
+      </script>
+      <script>
+        const tokenButton = document.querySelector('.token');
+        const overlay = document.querySelector('.overlay');
+
+        tokenButton.addEventListener('click', (event) => {
+          event.stopPropagation();
+          overlay.style.display = 'block';
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!tokenButton.contains(event.target) && !overlay.contains(event.target)) {
+            overlay.style.display = 'none';
+          }
+        });
+      </script>
+      <script>
+        function myFunction() {
+          document.getElementById("chatDropdown").classList.toggle("show");
+        }
+
+        function displayChatInfo(element) {
+          var chatItem = element.cloneNode(true); // 克隆点击的chat-box-info元素
+          var chatDisplay = document.getElementById("chatDisplay");
+          chatDisplay.innerHTML = ""; // 清空chatDisplay内容
+
+          // 自定义所需的格式
+          var chatUserPic = chatItem.querySelector(".chat-user-pic").innerHTML;
+          var chatUserName = chatItem.querySelector(".chat-user-name span").innerHTML;
+          var chatMsg = chatItem.querySelector(".chat-msg span").innerHTML;
+
+          // 构建自定义格式的HTML
+          var customHTML = `
+            <div class="custom-chat-info">
+              <div class="custom-user-info">
+                <div class="custom-user-pic">${chatUserPic}</div>
+                <div class="custom-user-name">${chatUserName}</div>
+                <i class="ri-close-fill" id="close" onclick="hideChatDisplay()"></i>
+              </div>
+              <div class="custom-chat-box">
+                <div class="custom-chat-user-pic">${chatUserPic}</div>
+                <div class="custom-chat-user-name">${chatUserName}</div>
+                <div class="custom-msg">${chatMsg}</div>
+                <i class="ri-heart-fill"></i>
+              </div>
+              <div class="custom-tool">
+                <i class="ri-emoji-sticker-fill"></i>
+                <i class="ri-image-fill"></i>
+                <input type="text" placeholder="請輸入訊息...">
+                <i class="ri-send-plane-2-fill"></i>
+              </div>
+            </div>
+          `;
+
+          chatDisplay.innerHTML = customHTML;
+          chatDisplay.style.display = "block"; // 显示chatDisplay
+        }
+
+        function hideChatDisplay() {
+          var chatDisplay = document.getElementById("chatDisplay");
+          chatDisplay.style.display = "none"; // 隐藏chatDisplay
+        }
+      </script>
+            <script>
+              function newsFunction() {
+                document.getElementById("newsDropdown").classList.toggle("newsshow");
+              }
+      
+              function showContent(side) {
+                var leftContent = document.getElementById("news-bar-left-content");
+                var rightContent = document.getElementById("news-bar-right-content");
+                var leftBar = document.getElementById("news-bar-left");
+                var rightBar = document.getElementById("news-bar-right");
+      
+                if (side === 'left') {
+                  leftContent.style.display = "block";
+                  rightContent.style.display = "none";
+                  leftBar.classList.add("active"); // 新增.active類別
+                  rightBar.classList.remove("active"); // 移除.active類別（避免右側也有橘色橫條）
+                } else {
+                  leftContent.style.display = "none";
+                  rightContent.style.display = "block";
+                  leftBar.classList.remove("active"); // 移除.active類別
+                  rightBar.classList.add("active"); // 新增.active類別
+                }
+              }
+      
+              // 在載入網頁時執行預設顯示news-bar-left-content
+              window.addEventListener('load', function () {
+                showContent('left');
+              });
+      
+            </script>
+    </body>
+</html>

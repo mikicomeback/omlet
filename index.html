@@ -20,7 +20,7 @@
         <li><a href="#">直播</a></li>
         <li><a href="#">遊戲</a></li>
         <li><a href="#">論壇</a></li>
-        <li><a href="#">活動</a></li>
+        <li><a href="./event.html">活動</a></li>
         <li><a href="#">進階方案</a></li>
         <li class="dropdown">
           <a href="#" onclick="toggleDropdown(event)">更多<i class="ri-arrow-down-s-fill"></i></a>
@@ -45,7 +45,7 @@
           </li>
           <div class="chat-dropdown">
             <li id="icon">
-              <i class="ri-message-2-fill" onclick="myFunction()"></i>
+              <img src="./static/img/oma_btn_communitypage_chat_normal.svg" style="margin-right: -5px;" class="ri-message-2-fill" onclick="myFunction()">
             </li>
             <div id="chatDropdown" class="chat-dropdown-content">
               <div class="chat-column">
@@ -226,24 +226,238 @@
             </div>
           </div>
           <div id="chatDisplay"></div>
-
-            <li id="icon"><i class="ri-user-fill"></i></li>
-            <li id="icon"><i class="ri-notification-2-fill"></i></li>
-            <li id="icon"><i class="ri-store-3-fill"></i></li>
-            <li class="token"><a><img src="./static/img/token.png" >購買OM幣</a></li>
-            <li class="profile">
-              <img src="./static/img/McluuQal.jpg">
+          <li id="icon"><img src="./static/img/oma_ic_followerlist_off.svg"></li>
+          <div class="news-dropdown">
+            <li id="icon">
+              <i class="ri-notification-2-fill" onclick="newsFunction()"></i>
             </li>
-            <li class="dropdown dropdown-profile">
-              <a href="#" onclick="toggleDropdown(event)">miki_come_back</a>
-              <div class="dropdown-content">
-                <a href="./setting.html">直播你的電腦遊戲</a>
-                <a href="./dashboard.html">直播控制台</a>
-                <a href="#">直播紀錄</a>
-                <a href="#">帳號設定</a>
-                <a href="#">獲取認證</a>
-                <a href="#">登出</a>
+            <div id="newsDropdown" class="news-dropdown-content">
+              <div class="news-column">
+                <div class="news-bar">
+                  <div class="news-bar-left" id="news-bar-left" onclick="showContent('left')">
+                    <span>我</span>
+                  </div>
+                  <div class="news-bar-right" id="news-bar-right" onclick="showContent('right')">
+                    <span>Omlet</span>
+                  </div>
+                </div>                
+                <div class="news-box-info">
+                  <div id="news-bar-left-content" class="content" style="display: none;">
+                    <!-- 左側內容 -->
+                    <div class="news">
+                      <div class="news-title">
+                        <span>New</span>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet頭貼2.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">wglow1031u Buff了你的貼文</span>
+                          <span class="news-text-time">19 秒鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/IRL.png" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet頭貼3.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">89tank64 Buff了你的貼文</span>
+                          <span class="news-text-time">19 秒鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/IRL.png" alt="左側圖片2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ago">
+                      <div class="news-title">
+                        <span>稍早</span>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet頭貼3.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">89tank64 在你的貼文留言</span>
+                          <span class="news-text-time">19 秒鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/火山.png" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet頭貼4.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">hello_jimmy.0825 Buff了你的貼文</span>
+                          <span class="news-text-time">1 小時前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/buff_icon_1.svg" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet頭貼5.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">miki_no_back 喜歡你的貼文，Omlet Arcade is Death</span>
+                          <span class="news-text-time">19 分鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/buff_icon_2.svg" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet頭貼6.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">miki_dont_back 在你的貼文留言，哈哈哈哈</span>
+                          <span class="news-text-time">47 分鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/pubg.png" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet tw.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">omlet.tw Buff了你的貼文</span>
+                          <span class="news-text-time">19 秒鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/IRL.png" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omletarcade.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">omletarcade Buff了你的貼文</span>
+                          <span class="news-text-time">59 分鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/Minecraft.png" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet th.png" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">omlet.th Buff了你的貼文</span>
+                          <span class="news-text-time">7 小時前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/IRL.png" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet es.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">omlet.es 在你的貼文留言，wow so cool!</span>
+                          <span class="news-text-time">1 分鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/Minecraft.png" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/cici.png" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">cici Buff了你的貼文</span>
+                          <span class="news-text-time">9 分鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/McluuQal.jpg" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/feng_nai.png" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">feng_nai 在你的貼文留言，哇! 可以幫我寫CSS嗎(X</span>
+                          <span class="news-text-time">59 分鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/meme1.jpg" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/omlet id.jpg" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">omlet.id 喜歡你的貼文，哇 羅沃怎麼那麼色!</span>
+                          <span class="news-text-time">59 分鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/meme2.jpg" alt="左側圖片2">
+                        </div>
+                      </div>
+                      <div class="news-row">
+                        <div class="news-image">
+                          <img src="./static/img/魔神娜.png" alt="左側圖片">
+                        </div>
+                        <div class="news-text">
+                          <span class="news-text-title">malshinna 喜歡你的貼文，哇 羅沃也太色了吧!</span>
+                          <span class="news-text-time">17 分鐘前</span>
+                        </div>
+                        <div class="news-image-last">
+                          <img src="./static/img/omlet event1.png" alt="左側圖片2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="news-bar-right-content" class="content" style="display: none;">
+                    <!-- 右側內容 -->
+                    <div class="news-row">
+                      <div class="news-image">
+                        <img src="./static/img/omlet頭貼4.jpg" alt="右側圖片">
+                      </div>
+                      <div class="news-text">
+                        <span class="news-text-title">hello_jimmy.0825 Buff了你的貼文</span>
+                        <span class="news-text-time">59 秒鐘前</span>
+                      </div>
+                      <div class="news-image-last">
+                        <img src="./static/img/LOL.png" alt="右側圖片2">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 其他新聞項目... -->
               </div>
+            </div>
+          </div>             
+          <li id="icon"><i class="ri-store-3-fill"></i></li>
+          <li class="token"><a><img src="./static/img/token.png" >購買OM幣</a></li>
+          <li class="profile">
+            <img src="./static/img/McluuQal.jpg">
+          </li>
+          <li class="dropdown dropdown-profile">
+            <a href="#" onclick="toggleDropdown(event)">miki_come_back</a>
+            <div class="dropdown-content">
+              <a href="./setting.html">直播你的電腦遊戲</a>
+              <a href="./dashboard.html">直播控制台</a>
+              <a href="#">直播紀錄</a>
+              <a href="#">帳號設定</a>
+              <a href="#">獲取認證</a>
+              <a href="./login.html">登出</a>
+            </div>
             </li>
           </ul>
         </div>
@@ -271,6 +485,7 @@
                 </div>
                 <div class="infos">
                   <span class="name">miki_come_back</span>
+                  <img src="./static/img/oma_btn_quiz_select.svg">
                   <div class="fans-info">
                     <span class="fans">13500</span>
                     <span class="fans-text">粉絲</span>
@@ -458,20 +673,20 @@
         <div class="overlay-title">Buy Tokens</div>
         <div class="wallet">
           <span class="wallet-text">My Wallet</span>
-          <a class="wallet-amount"><img src="./static/img/token.png">1320</a>
+          <a class="wallet-amount"><img src="./static/img/buff_icon_1.svg">1320</a>
         </div>
                 <div class="square-row">
           <div class="square-object">
             <div class="token-wrapper">
               <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">70</div>
-              <img src="./static/img/token.png" class="token-ex">
+              <img src="./static/img/buff_icon_1.svg" class="token-ex">
             </div>
             <div class="overlay-text">USD$1</div>
           </div>
           <div class="square-object">
             <div class="token-wrapper">
               <div class="token-amount"><img src="./static/img/token.png" alt="Square Image 1">350</div>
-              <img src="./static/img/token.png" class="token-ex">
+              <img src="./static/img/buff_icon_2.svg" class="token-ex">
             </div>
             <div class="overlay-text">USD$5</div>
           </div>
@@ -512,11 +727,11 @@
           <div class="post-user-input">What's New?</div>
           <hr class="post-line">
           <div class="post-bar">
-            <div class="post-item"><i class="ri-image-fill" style="color: orangered;"></i><a class="post-item-text">Image</a></div>
+            <div class="post-item"><img src="./static/img/oma_btn_gallery_cantshow.svg"><a class="post-item-text">Image</a></div>
             <div class="post-item"><i class="ri-pages-fill" style="color:rgb(0, 145, 255);"></i><a class="post-item-text">Story</a></div>
             <div class="post-item"><i class="ri-video-fill" style="color: rgb(142, 0, 142);"></i><a class="post-item-text">Video</a></div>
             <div class="post-item"><i class="ri-map-2-line" style="color: rgb(0, 174, 0);"></i><a class="post-item-text">Mod</a></div>
-            <div class="post-item"><i class="ri-live-fill" style="color: rgb(255, 85, 85);"></i><a class="post-item-text">Go Live</a></div>
+            <div class="post-item"><img src="./static/img/oma_btn_streamtab_livechat_inactive.svg" style="margin-right: 5px;"><a class="post-item-text">Go Live</a></div>
           </div>
         </div>
 
@@ -532,7 +747,7 @@
           <div class="right-bar-event-name">
             <span class="right-bar-event">Omlet Event</span>
             <div class="event-space"></div>
-            <span class="right-bar-saw">See all</span>
+            <span class="right-bar-saw"><a href="./event.html">See all</a></span>
           </div>
 
           <div class="slideshow">
@@ -918,6 +1133,186 @@
         </div>
       </div>  
 
+      <div class="posts">
+        <div class="post-box">
+          <div class="post-circle">
+            <img src="./static/img/omlet頭貼6.jpg" class="post-pic" alt="post-user-pic">
+          </div>
+          <div class="post-user-info">
+            <div class="post-username"><a>miki_no_back</a>
+              <div class="follow-btn">
+                <i class="ri-add-fill"></i>
+                <a class="follow-text">Follow</a>
+              </div>
+            </div>
+            <div class="post-time">2hr ago • Minecraft</div>
+          </div>
+          <div class="posts-spacer"></div>
+          <div class="posts-item">
+            <span class="icon-text">IRL</span>
+            <div class="post-icon"><img src="./static/img/IRL.png" alt="game-icon"></div>
+          </div>
+        </div>
+        <div class="posts-title">羅沃LSP SB</div>
+        <div class="posts-subtitle">
+          可是，即使是這樣，羅沃LSP的出現仍然代表了一定的意義。現在，正視羅沃LSP的問題，是非常非常重要的。因為，當你搞懂後就會明白了。若能夠欣賞到羅沃LSP的美，相信我們一定會對羅沃LSP改觀。所謂羅沃LSP，關鍵是羅沃LSP需要如何解讀。
+        </div>
+        <div class="posts-pic">
+          <img src="./static/img/omlet頭貼2.jpg" alt="posts-pic">
+        </div>
+        <div class="posts-tool">
+          <i class="ri-heart-fill" id="like-btn4">喜歡</i>
+          <i class="ri-chat-1-fill"> 評論</i>
+          <i class="ri-money-dollar-circle-fill" style="color: gold;"> BUFF</i>
+          <i class="ri-share-fill"> 分享</i>
+        </div>
+      </div>  
+
+      <div class="posts">
+        <div class="post-box">
+          <div class="post-circle">
+            <img src="./static/img/userpic.png" class="post-pic" alt="post-user-pic">
+          </div>
+          <div class="post-user-info">
+            <div class="post-username"><a>none</a>
+              <div class="follow-btn">
+                <i class="ri-add-fill"></i>
+                <a class="follow-text">Follow</a>
+              </div>
+            </div>
+            <div class="post-time">2hr ago • IRL</div>
+          </div>
+          <div class="posts-spacer"></div>
+          <div class="posts-item">
+            <span class="icon-text">IRL</span>
+            <div class="post-icon"><img src="./static/img/IRL.png" alt="game-icon"></div>
+          </div>
+        </div>
+        <div class="posts-title">羅沃LSP SB</div>
+        <div class="posts-subtitle">
+          馬洛利說過一句著名的話，所謂文化，比起文明開化往往不過是掩蔽愚昧無知的一層裱糊紙。他會這麼說是有理由的。吵架文改變了我的命運。由於，吵架文因何而發生？<br><br>
+          傅玄曾講過，同聲自相應，同心自相知。<br><br>想必各位已經看出了其中的端倪。孟子講過一段耐人尋思的話，貴，人之所欲; 貴為天子，而不足以解憂。希望大家能發現話中之話。問題的核心究竟是什麼？蓋斯科因說過一句富有哲理的話，維持一座空中樓閣需付出高昂的代。帶著這句話，我們還要更加慎重的審視這個問題。總而言之，艾彌爾說過一句經典的名言，是工作使人生有味。這不禁令我深思。<br><br>儘管吵架文看似不顯眼，卻佔據了我的腦海。儘管如此，我們仍然需要對吵架文保持懷疑的態度。馬雅可夫斯基說過一句經典的名言，世界上沒有比結實的肌肉和新鮮的皮膚更加美麗的衣裳。<br><br>這讓我對於看待這個問題的方法有了巨大的改變。不要先入為主覺得吵架文很複雜，實際上，吵架文可能比你想的還要更複雜。培根講過，世上友誼本罕見，平等友情更難求。但願諸位理解後能從中有所成長。愛迪生告訴我們，謙遜不僅是一種裝飾品，也是美德的護衛。這不禁令我重新仔細的思考。而這些並不是完全重要，更加重要的問題是，如果別人做得到，那我也可以做到。
+        </div>
+        <div class="posts-pic">
+          <img src="./static/img/meme2.jpg" alt="posts-pic">
+        </div>
+        <div class="posts-tool">
+          <i class="ri-heart-fill" id="like-btn4">喜歡</i>
+          <i class="ri-chat-1-fill"> 評論</i>
+          <i class="ri-money-dollar-circle-fill" style="color: gold;"> BUFF</i>
+          <i class="ri-share-fill"> 分享</i>
+        </div>
+      </div>  
+
+      <div class="posts">
+        <div class="post-box">
+          <div class="post-circle">
+            <img src="./static/img/omlet頭貼5.jpg" class="post-pic" alt="post-user-pic">
+          </div>
+          <div class="post-user-info">
+            <div class="post-username"><a>im_noob</a>
+              <div class="follow-btn">
+                <i class="ri-add-fill"></i>
+                <a class="follow-text">Follow</a>
+              </div>
+            </div>
+            <div class="post-time">30s ago • IRL</div>
+          </div>
+          <div class="posts-spacer"></div>
+          <div class="posts-item">
+            <span class="icon-text">IRL</span>
+            <div class="post-icon"><img src="./static/img/IRL.png" alt="game-icon"></div>
+          </div>
+        </div>
+        <div class="posts-title">標題：遺產之爭：一場家族的風暴</div>
+        <div class="posts-subtitle">
+          段落一：
+          這是一個平凡家庭的故事，一場起因於遺產之爭的家族風暴。當家族中的長者不幸離世，留下了一份豐厚的遺產，原本應該是團結的時刻，卻漸漸演變成了一場驚心動魄的爭吵，家人之間的情感裂痕也逐漸擴大。
+          <br><br>
+          段落二：
+          在遺囑公開後，家族中的成員們發現這份遺產包含了一筆巨額財產以及房產。眼看著這筆龐大的財富，各人的貪婪心理被激發，紛紛展開了自己的爭取戰略。有些人想通過談判達成公平分配，有些人則打算以訴訟的方式來爭取自己的份額。一度和睦的家庭關係如今卻變得僵持不下，氣氛緊張而充滿敵對。
+          <br><br>
+          段落三：
+          在爭吵的過程中，曾經的兄弟姐妹變得陌生，彼此的語言中充滿了怨恨和責備。他們忘記了遺產的本意是傳承親情和愛，取而代之的是對金錢的瘋狂追逐。各種負面情緒在家族中蔓延，原本團結的家庭如今四分五裂，被遺產之爭撕裂。
+          <br><br>
+          段落四：
+          面對家族的這場風暴，有些長輩不勝其擾，他們原本期待著家人之間的和睦相處，但卻見證著家族成員在爭產過程中互不相讓。他們曾經的希望和滿懷期待，現在卻化為一片失望。他們反思著是否對下一代的教育有所缺失，是否應該更加注重家人之間的情感交流。
+          <br><br>
+          段落五：
+          然而，也有一些成員在這場風暴中保持理智和冷靜。他們明白金錢和遺產不能代替家庭的重要性，不願讓這些爭吵毀掉家人之間多年積累的情感。他們試圖調解家族的爭端，希望能尋找到一個大家都能接受的解決方案。
+          <br><br>
+          段落六：
+          最終，在經歷了長時間的爭吵和冷戰後，家族成員們逐漸明白了金錢和遺產不是一切，而家庭的和諧才是最重要的。他們重新開始進行對話，反思過去的過錯，並試圖重建破碎的親情。
+          <br><br>
+          段落七：
+          經過艱辛的努力，家族終於走出了這場風暴。他們學會了彼此包容和理解，將過去的爭執留在歷史的頁面，重新攜手面對未來的生活。遺產之爭的經歷讓他們更加珍惜家人之間的情感，認識到金錢不能代替親情的價值。
+          <br><br>
+          結語：
+          遺產之爭雖然曾經讓這個家族陷入痛苦和分裂，但同時也讓他們成長和改變。在這場風暴後，他們重新理解了家庭的意義，認識到金錢與愛的區別。這個家族用痛苦的代價學會了珍惜，學會了包容，並用理智與愛心將彼此聚集在一起，走向更美好的未來。
+
+        </div>
+        <div class="posts-pic">
+          <img src="./static/img/meme1.jpg" alt="posts-pic">
+        </div>
+        <div class="posts-tool">
+          <i class="ri-heart-fill" id="like-btn4">喜歡</i>
+          <i class="ri-chat-1-fill"> 評論</i>
+          <i class="ri-money-dollar-circle-fill" style="color: gold;"> BUFF</i>
+          <i class="ri-share-fill"> 分享</i>
+        </div>
+      </div>  
+
+      <div class="posts">
+        <div class="post-box">
+          <div class="post-circle">
+            <img src="./static/img/userpic.png" class="post-pic" alt="post-user-pic">
+          </div>
+          <div class="post-user-info">
+            <div class="post-username"><a>omlet_is_trash</a>
+              <div class="follow-btn">
+                <i class="ri-add-fill"></i>
+                <a class="follow-text">Follow</a>
+              </div>
+            </div>
+            <div class="post-time">2s ago • IRL</div>
+          </div>
+          <div class="posts-spacer"></div>
+          <div class="posts-item">
+            <span class="icon-text">IRL</span>
+            <div class="post-icon"><img src="./static/img/IRL.png" alt="game-icon"></div>
+          </div>
+        </div>
+        <div class="posts-title">我的文章</div>
+        <div class="posts-subtitle">
+          <br>
+          嘿，你們看看這個該死的Omlet Arcade，這裡真是聚集了一群莫名其妙的傻逼！他們以為自己是遊戲高手，但真是好笑到爆！這個破平台吸引了一大堆遊戲愛好者，但也同時吸引了一些被稱為「屁孩」的超級無聊傢伙。他們就是愛找碴，無聊到一點小事都能吵成爆炸！現在就讓我給你們分享一場在這個該死的Omlet Arcade社群中的爭吵內容。
+          <br><br>
+          這天，我正在直播，然後這群傻逼居然在聊天室裡瘋狂叫囂，好像有人會理他們似的。其中一個叫「MasterTroll」的傢伙，就是個特級傻逼，開始在直播聊天室裡傳播謠言，亂說其他觀眾和我有問題。
+          <br><br>
+          我真的受夠了這些屁孩的爛行徑！我試著冷靜，勸告這個「MasterTroll」別再搗亂，可他回應我說：「哈哈，我就是愛看你們生氣，有本事你們能怎樣？」
+          <br><br>
+          我的觀眾們也被這些垃圾惹火了！他們開始跟「MasterTroll」對罵，希望他能收斂點。可這傢伙根本不給面子，還更加囂張地進行辱罵和挑釁。
+          <br><br>
+          我真的火冒三丈啊！這些傻逼永遠停不了嘴，直播間瞬間燃起爭吵的火焰！雙方都不肯妥協，氣氛愈演愈烈。而且連其他一些善良的觀眾都被拖下水，捲入這場愈演愈烈的爭吵。
+          <br><br>
+          終於，管理員來了。這幫傻逼的行徑引起了他們的關注。他們終於醒悟，試圖平息雙方的爭執。管理員警告這個「MasterTroll」，說如果他繼續這樣下去，就滾蛋。
+          <br><br>
+          糟糕透了！這個「MasterTroll」根本不把管理員放在眼裡。他繼續囂張地搗亂，完全無視警告。我和我的觀眾也不甘示弱，我們決定要和他拼了！
+          <br><br>
+          爭吵越演越烈，Omlet Arcade的社群陷入更大的混亂。這裡根本沒有和解，也沒有友善，只有仇恨和挑釁的火花。整個社群充滿了負面情緒，讓人感到十分煩躁和絕望。我真的受夠了這些爛人，我不想再在這個地方待下去。這場爭吵只證明了一點：Omlet Arcade這個地方真的是滿滿的不成熟、愚蠢又令人噁心的傻逼屁孩。我真的懷疑，這個地方是否真的值得我們為之爭吵。
+        
+        </div>
+        <div class="posts-pic">
+          <img src="./static/img/meme2.jpg" alt="posts-pic">
+        </div>
+        <div class="posts-tool">
+          <i class="ri-heart-fill" id="like-btn4">喜歡</i>
+          <i class="ri-chat-1-fill"> 評論</i>
+          <i class="ri-money-dollar-circle-fill" style="color: gold;"> BUFF</i>
+          <i class="ri-share-fill"> 分享</i>
+        </div>
+      </div>  
+
       <script>
         // JavaScript程式碼
         function toggleDropdown(event) {
@@ -1037,6 +1432,36 @@
           var chatDisplay = document.getElementById("chatDisplay");
           chatDisplay.style.display = "none"; // 隐藏chatDisplay
         }
+      </script>
+      <script>
+        function newsFunction() {
+          document.getElementById("newsDropdown").classList.toggle("newsshow");
+        }
+
+        function showContent(side) {
+          var leftContent = document.getElementById("news-bar-left-content");
+          var rightContent = document.getElementById("news-bar-right-content");
+          var leftBar = document.getElementById("news-bar-left");
+          var rightBar = document.getElementById("news-bar-right");
+
+          if (side === 'left') {
+            leftContent.style.display = "block";
+            rightContent.style.display = "none";
+            leftBar.classList.add("active"); // 新增.active類別
+            rightBar.classList.remove("active"); // 移除.active類別（避免右側也有橘色橫條）
+          } else {
+            leftContent.style.display = "none";
+            rightContent.style.display = "block";
+            leftBar.classList.remove("active"); // 移除.active類別
+            rightBar.classList.add("active"); // 新增.active類別
+          }
+        }
+
+        // 在載入網頁時執行預設顯示news-bar-left-content
+        window.addEventListener('load', function () {
+          showContent('left');
+        });
+
       </script>
     </body>
 </html>

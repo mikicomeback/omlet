@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./static/img/omlet.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="./static/css/login.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+          <img src="./static/img/omlet_logo.png">
+        </div>
+        <h1>登入</h1>
+          <div class="logo-text">
+            <img src="./static/img/abc.png">
+          </div>
+        <form id="loginForm">
+            <label for="username">帳號:</label>
+            <input type="text" id="username" required>
+            <label for="password">密碼:</label>
+            <input type="password" id="password" required>
+            <div class="forgot">
+              <a href="#">忘記密碼?</a>
+              <a href="./registe.html">沒有帳號?</a>
+            </div>
+          <!-- 在登录按钮前面添加一个隐藏的 GIF 图片 -->
+          <button type="submit" id="loginBtn">登入</button>
+        </form>
+        <p id="errorMessage" style="color: red; display: flex; position: relative; width: 100%; height: 25px ; text-align: center; align-items: center; justify-content: center; margin-left:auto; margin-right:auto;""></p> 
+    </div>
+
+    <script>
+      // 在这个对象中存储允许的用户名和密码对
+      const validCredentials = {
+          "miki_come_back": "aaa",
+          "wglow1031u": "imLSP",
+          "user3": "password3"
+      };
+
+      const loginForm = document.getElementById("loginForm");
+      const loginBtn = document.getElementById("loginBtn");
+
+      const errorMessage = document.getElementById("errorMessage");
+
+      loginForm.addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          // Check if the entered username and password match any pair in validCredentials object
+          if (validCredentials[username] === password) {
+              errorMessage.textContent = "";
+              // Validation successful, replace the button text with the GIF image
+              loginBtn.innerHTML = 
+                  '<img src="./static/img/loading.gif" alt="loading" id="loadingGif" style="display: flex; position: relative; width: 25px; height: 25px ; text-align: center; align-items: center; justify-content: center; margin-left:auto; margin-right:auto;">';
+              
+              // Wait for 1 second and then redirect to User Page
+              setTimeout(function() {
+                  // 使用 window.location.href 來跳轉頁面
+                  window.location.href = "index.html";
+              }, 1000);
+          } else {
+              // Validation failed, show error message, and add the shake class to the body to trigger the shake animation
+              errorMessage.textContent = "錯誤的帳號/email帳戶或密碼.";
+              document.body.classList.add("shake");
+
+              // After 0.5 seconds, remove the shake class to stop the animation, allowing it to be triggered again
+              setTimeout(function() {
+                  document.body.classList.remove("shake");
+              }, 500);
+          }
+      });
+
+      // 禁用使用者直接更改網址跳轉到其他頁面
+      window.history.pushState(null, null, window.location.href);
+      window.onpopstate = function(event) {
+          window.history.pushState(null, null, window.location.href);
+      };
+  </script>
+</body>
+</html>

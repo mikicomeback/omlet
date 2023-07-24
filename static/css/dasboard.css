@@ -1,3 +1,24 @@
+::-webkit-scrollbar {
+  width: 8px; /* 滚动条的宽度 */
+  height: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #44464e; /* 滚动条轨道的背景色 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* 滚动条的颜色 */
+  border-radius: 4px; /* 滚动条的圆角 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* 悬停时滚动条的颜色 */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #333; /* 按下时滚动条的颜色 */
+}
 
 body{
     margin: 0;
@@ -204,11 +225,12 @@ body{
   }
   
   .chat-dropdown-content {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: -10vw;
     display: none;
     position: absolute;
-    min-height: 40vw;
+    min-height: 30vw;
+    height: 30vw;
     width: 300px;
     overflow: auto;
     z-index: 1;
@@ -217,6 +239,7 @@ body{
     border-color: #5B5B5B;
     border-width: 1px;
     border-radius: 3px;
+    overflow-y: auto;
   }
   
   .chat-dropdown-content a {
@@ -287,6 +310,163 @@ body{
   
   
   .show {display: block;}
+  
+  .news-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .news-dropdown-content {
+    margin-top: 20px;
+    margin-left: -10vw;
+    display: none;
+    position: absolute;
+    min-height: 30vw;
+    height: 30vw;
+    width: 320px;
+    overflow: auto;
+    z-index: 1;
+    background-color: #212332;
+    border-style: solid;
+    border-color: #5B5B5B;
+    border-width: 1px;
+    border-radius: 3px;
+    overflow-y: auto;
+  }
+  
+  .news-bar {
+    display: flex;
+    justify-content: space-between;
+    min-height: 30px;
+    padding: 5px 5px 5px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 新增陰影效果 */
+  }
+  
+  .news-bar-left, .news-bar-right {
+    position: relative;
+    font-weight: 600;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .news-dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .news-dropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: #111;
+  }
+  
+  .news-dropdown-content .news-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  #news-bar-left-content,
+  #news-bar-right-content {
+    position: absolute;
+    overflow-y: auto;
+  }
+  
+  .news-box-info .news,
+  .news-box-info .ago{
+    position: relative; /* 將父容器設置為相對定位 */
+  }
+  
+  .news-box-info .news-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 320px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .news-box-info .news-title {
+    position: relative;
+    top: 10px; /* 設置置頂 */
+    left: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .news-box-info .news-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .news-box-info .news-image {
+    position: absolute;
+    left: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  
+  .news-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .news-text {
+    margin-left: 65px;
+    width: 188px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* white-space: nowrap; 禁止文字換行 */
+    overflow: hidden; /* 隱藏超出範圍的文字 */
+    /* text-overflow: ellipsis;  當文字超出時使用省略號表示 */
+  }
+  
+  .news-text-title {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+  
+  .news-text-time {
+    font-weight: 300;
+    font-size: 12px;
+  }
+  
+  .news-box-info .news-image-last {
+    position: absolute;
+    right: 10px;
+    margin-right: 5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+  }
+  
+  .news-image-last img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+  
+  .news-bar-right.active,
+  .news-bar-left.active {
+    color: orangered;
+  }
+  
+  .newsshow {
+    display: block;
+  }
+  
   
   .overlay {
     position: fixed;
@@ -446,7 +626,7 @@ body{
     color: #fff;
   }
   
-  .content {
+  .top-content {
     position: fixed;
     display: flex;
     align-items: center;

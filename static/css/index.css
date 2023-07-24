@@ -1,4 +1,3 @@
-
 @keyframes borderAnimation {
   0% {
     border: 3px solid red;
@@ -234,8 +233,10 @@ ul.right-items li:last-child {
 }
 
 #icon i{
+  color: #fff;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 
 .control-wrapper {
@@ -525,7 +526,7 @@ ul.right-items li:last-child {
   font-size: 25px;
 }
 
-.post-item i:first-child{
+.post-item img:first-child{
   margin-left: 10px;
 }
 
@@ -543,7 +544,7 @@ a{
     max-width: 600px;
     max-height: 600px;
     display: flex;
-    margin-left: 18rem; /* 向左移动50px */
+    margin: 0 auto; /* 居中 */
 
   }  
   
@@ -557,7 +558,12 @@ a{
     align-items: center;
     justify-content: center;
     margin: 0 auto; /* 居中 */
-  }  
+    margin-left: max((100vw - 430px) / 2, 0); /* 自动计算左边距，最小为 0 */
+    margin-right: max((100vw - 430px) / 2, 0); /* 自动计算右边距，最小为 0 */
+    left: min((100vw - 430px) / 2, 0); /* 在左边界外部的情况下向内移动 */
+    right: min((100vw - 430px) / 2, 0); /* 在右边界外部的情况下向内移动 */
+    transform: translateX(-40%); /* 在左边界外部的情况下向左移动 */
+  }
   
 
 .cards label {
@@ -1037,11 +1043,15 @@ a{
 }
 
 .right-event-bar .right-bar-saw{
+  padding: 6px 0 0 0;
+}
+
+.right-event-bar .right-bar-saw a{
   cursor: pointer;
   color: rgb(199, 53, 0);
   font-weight: 600;
   padding: 6px 0 0 0;
-
+  text-decoration: none;
 }
 
 .posts {
@@ -1717,11 +1727,12 @@ a{
 }
 
 .chat-dropdown-content {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: -10vw;
   display: none;
   position: absolute;
-  min-height: 40vw;
+  min-height: 30vw;
+  height: 30vw;
   width: 300px;
   overflow: auto;
   z-index: 1;
@@ -1730,6 +1741,7 @@ a{
   border-color: #5B5B5B;
   border-width: 1px;
   border-radius: 3px;
+  overflow-y: auto;
 }
 
 .chat-dropdown-content a {
@@ -1798,8 +1810,164 @@ a{
   text-overflow: ellipsis;
 }
 
-
 .show {display: block;}
+
+.news-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.news-dropdown-content {
+  margin-top: 20px;
+  margin-left: -10vw;
+  display: none;
+  position: absolute;
+  min-height: 30vw;
+  height: 30vw;
+  width: 320px;
+  overflow: auto;
+  z-index: 1;
+  background-color: #212332;
+  border-style: solid;
+  border-color: #5B5B5B;
+  border-width: 1px;
+  border-radius: 3px;
+  overflow-y: auto;
+}
+
+.news-bar {
+  display: flex;
+  justify-content: space-between;
+  min-height: 30px;
+  padding: 5px 5px 5px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 新增陰影效果 */
+}
+
+.news-bar-left, .news-bar-right {
+  position: relative;
+  font-weight: 600;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.news-dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.news-dropdown-content a:hover {
+  background-color: #f0f0f0;
+  color: #111;
+}
+
+.news-dropdown-content .news-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#news-bar-left-content,
+#news-bar-right-content {
+  position: absolute;
+  overflow-y: auto;
+}
+
+.news-box-info .news,
+.news-box-info .ago{
+  position: relative; /* 將父容器設置為相對定位 */
+}
+
+.news-box-info .news-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 320px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.news-box-info .news-title {
+  position: relative;
+  top: 10px; /* 設置置頂 */
+  left: 10px;
+  margin-bottom: 20px;
+}
+
+.news-box-info .news-content {
+  display: flex;
+  align-items: center;
+}
+
+.news-box-info .news-image {
+  position: absolute;
+  left: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.news-text {
+  margin-left: 65px;
+  width: 188px;
+  height: 60px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* white-space: nowrap; 禁止文字換行 */
+  overflow: hidden; /* 隱藏超出範圍的文字 */
+  /* text-overflow: ellipsis;  當文字超出時使用省略號表示 */
+}
+
+.news-text-title {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.news-text-time {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.news-box-info .news-image-last {
+  position: absolute;
+  right: 10px;
+  margin-right: 5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 3px;
+}
+
+.news-image-last img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.news-bar-right.active,
+.news-bar-left.active {
+  color: orangered;
+}
+
+.newsshow {
+  display: block;
+}
+
 
 #chatDisplay {
   display: none;

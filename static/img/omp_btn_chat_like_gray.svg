@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px"
+    height="16px"
+    viewBox="0 0 106 96"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: sketchtool 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>omp_btn_chat_like_gray</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="In-game-chat_Generalflow_V4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="N1.2_hint-tutorial" transform="translate(-515.000000, -119.000000)" fill="#f0f0f0">
+            <g id="BG">
+                <g id="omp_btn_chat_like_gray" transform="translate(515.000000, 119.000000)">
+                    <path d="M28.7430556,1 C21.0728509,1 14.1371418,4.18930827 9.15972222,9.39285714 C4.10071638,14.5122631 1,21.6463609 1,29.5357143 C1,37.4250677 4.10071638,44.5589399 9.15972222,49.6785714 L53.2222222,95 L97.2847222,49.6785714 C102.343947,44.4750226 105.444444,37.3411504 105.444444,29.5357143 C105.444444,21.6463609 102.343947,14.5122631 97.2847222,9.39285714 C92.2257164,4.18930827 85.2900073,1 77.7013889,1 C70.0314035,1 63.0956945,4.18930827 58.1180556,9.39285714 C56.1597661,11.4070977 54.5278216,13.6733158 53.2222222,16.1071429 C51.9168421,13.5893985 50.2846784,11.3231804 48.3263889,9.39285714 C43.3489693,4.18930827 36.4130409,1 28.7430556,1" id="btn_like_click-copy-7"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
